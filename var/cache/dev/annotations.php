@@ -68,6 +68,12 @@ return [[
 '[C]App%5CController%5CBaseController%23index' => 1,
 'App%5CController%5CBaseController%23proshop' => 0,
 '[C]App%5CController%5CBaseController%23proshop' => 1,
+'App%5CController%5CSecurityController' => 0,
+'[C]App%5CController%5CSecurityController' => 1,
+'App%5CController%5CSecurityController%23login' => 0,
+'[C]App%5CController%5CSecurityController%23login' => 1,
+'App%5CController%5CSecurityController%23logout' => 0,
+'[C]App%5CController%5CSecurityController%23logout' => 1,
 'App%5CEntity%5CUser' => 0,
 '[C]App%5CEntity%5CUser' => 1,
 'App%5CEntity%5CUser%23getId' => 0,
@@ -92,6 +98,10 @@ return [[
 '[C]App%5CEntity%5CUser%23getSalt' => 1,
 'App%5CEntity%5CUser%23eraseCredentials' => 0,
 '[C]App%5CEntity%5CUser%23eraseCredentials' => 1,
+'App%5CEntity%5CUser%23isVerified' => 0,
+'[C]App%5CEntity%5CUser%23isVerified' => 1,
+'App%5CEntity%5CUser%23setIsVerified' => 0,
+'[C]App%5CEntity%5CUser%23setIsVerified' => 1,
 'App%5CEntity%5CUser%24id' => 0,
 '[C]App%5CEntity%5CUser%24id' => 1,
 'App%5CEntity%5CUser%24email' => 0,
@@ -100,6 +110,8 @@ return [[
 '[C]App%5CEntity%5CUser%24roles' => 1,
 'App%5CEntity%5CUser%24password' => 0,
 '[C]App%5CEntity%5CUser%24password' => 1,
+'App%5CEntity%5CUser%24isVerified' => 0,
+'[C]App%5CEntity%5CUser%24isVerified' => 1,
 'Doctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController' => 0,
 '[C]Doctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController' => 1,
 'Doctrine%5CBundle%5CDoctrineBundle%5CController%5CProfilerController%23__construct' => 0,
@@ -576,6 +588,6 @@ return [[
 ], [
 
 0 => [],
-1 => 1683706481,
+1 => 1683708005,
 
 ]];

@@ -115,7 +115,10 @@ class __TwigTemplate_1a7aa7a075b08be27bc338ba4b9899c7641305235442efc452eab6e5fbb
 \t\t\t\t\t\t\t<a class=\"nav-link dropdown-toggle\" data-bs-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Identification</a>
 \t\t\t\t\t\t\t<div class=\"dropdown-menu\">
 \t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">S'inscrire</a>
-\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Se connecter</a>
+\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"";
+        // line 67
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
+        echo "\">Se connecter</a>
 \t\t\t\t\t\t\t\t<div></li>
 \t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t</li>
@@ -248,7 +251,7 @@ class __TwigTemplate_1a7aa7a075b08be27bc338ba4b9899c7641305235442efc452eab6e5fbb
 
     public function getDebugInfo()
     {
-        return array (  232 => 117,  225 => 116,  213 => 96,  199 => 12,  190 => 8,  183 => 7,  174 => 119,  172 => 116,  151 => 97,  149 => 96,  109 => 59,  101 => 54,  59 => 14,  57 => 12,  54 => 11,  52 => 7,  44 => 1,);
+        return array (  235 => 117,  228 => 116,  216 => 96,  202 => 12,  193 => 8,  186 => 7,  177 => 119,  175 => 116,  154 => 97,  152 => 96,  120 => 67,  109 => 59,  101 => 54,  59 => 14,  57 => 12,  54 => 11,  52 => 7,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -319,7 +322,7 @@ class __TwigTemplate_1a7aa7a075b08be27bc338ba4b9899c7641305235442efc452eab6e5fbb
 \t\t\t\t\t\t\t<a class=\"nav-link dropdown-toggle\" data-bs-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Identification</a>
 \t\t\t\t\t\t\t<div class=\"dropdown-menu\">
 \t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">S'inscrire</a>
-\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"#\">Se connecter</a>
+\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"{{path('app_login')}}\">Se connecter</a>
 \t\t\t\t\t\t\t\t<div></li>
 \t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t</li>

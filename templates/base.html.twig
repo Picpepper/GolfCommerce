@@ -7,6 +7,35 @@
 		{% block stylesheets %}
 			<!-- Bootstrap CSS -->
 			<link href="https://bootswatch.com/5/lumen/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+    background-image: url('Images/arras-golf.jpg');
+    background-size: cover;
+    margin: 0; /* réinitialisation des marges par défaut du navigateur */
+    padding: 0; /* réinitialisation des marges internes par défaut du navigateur */
+    min-height: 100vh; /* spécifie la hauteur minimale de la page à 100% de la hauteur de la vue */
+    position: relative; /* permet de positionner les éléments enfants par rapport à ce conteneur */
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Images/arras-golf.jpg');
+    background-size: cover;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+footer {
+  height: 25px;
+  background-color: #f2f2f2;
+}
+</style>
 		{% endblock %}
 		<title>
 			{% block title %}Golf -
@@ -17,104 +46,88 @@
 	<body>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-black">
 			<div class="container-fluid">
-				<a class="navbar-brand text-center" href="#">
-					Golf
-
+				<a class="navbar-brand text-center" href="{{path('index')}}">
+					Arras Golf
 					<div class="container-fluid nav-item">
-						<div class="carousel slide carousel-fade" data-bs-ride="carousel" id="carousel">
-
-							<div class="carousel-inner ">
-								<div class="carousel-item active" data-bs-interval="2000">
-									<img src="Img-navbar/Swing1-t.png" alt="golf1" width="100" height="100">
-								</div>
-								<div class="carousel-item" data-bs-interval="2000">
-									<img src="Img-navbar/Swing2-t.png" alt="golf2" width="100" height="100">
-								</div>
-								<div class="carousel-item" data-bs-interval="2000">
-									<img src="Img-navbar/Swing3-tb.png" alt="golf3" width="100" height="100">
-								</div>
-								<div class="carousel-item" data-bs-interval="2000">
-									<img src="Img-navbar/Swing4-t.png" alt="golf4" width="100" height="100">
-								</div>
-								<div class="carousel-item" data-bs-interval="2000">
-									<img src="Img-navbar/Swing5-t.png" alt="golf5" width="100" height="100">
-								</div>
-							</div>
-						</div>
+						<img src="Images/img-navbar/swing.gif" alt="GIF">
 					</div>
 				</a>
-
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
-
 				<div class="collapse navbar-collapse" id="navbarColor01">
 					<ul class="navbar-nav me-auto">
 						<li class="nav-item">
-							<a class="nav-link active" href="{{path('index')}}">Accueil
-								<span class="visually-hidden">(current)</span>
+							<a class="nav-link text-white" href="{{path('proshop')}}">Proshop
+							</a>
+						</li>
+						{% if not is_granted('IS_AUTHENTICATED_FULLY') %}
+						<div class="d-flex flex-row-reverse">
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Identification</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item text-black" href="{{path('app_login')}}">Se connecter
+									</a>
+									<a class="dropdown-item text-black" href="{{path('app_register')}}">S'inscrire
+									</a>
+								</div>
+							</li>
+						{% else %}
+							<li class="nav-item">
+								<a class="nav-link" href="{{path('app_logout')}}">
+									<i class="bi bi-x-circle-fill text-white"></i>
+								</a>
+							</li>
+						{% endif %}
+					</ul>
+				</div>
+			</div>
+		</nav>
+
+<!-- 
+	1) Finir et régler la navbar :
+		- Soit le carousel avec les images, soit trouver une solution par rapport au GIF
+		- Si carousel, voir pour virer l'effet dégueu de transition qui réaggrandi l'image pendant peu de temps
+		- Trouver la solution pour mettre l'identification à droite
+												
+	2) Aller plus loin :
+	    - Analyser le contenu des "à propos" et "mentions légales" des sites, 
+	    - Comprendre
+	    - Créer ou copier coller
+									
+	4) Régler le "Inscrivez-vous"
+		- Déjà, quand on ne met pas un mail ça met une erreur bizarer, j'aimerai que cette erreur se fasse autrement. Déjà savoir si c'est une erreur du code faite par le développeur ou juste une erreur indiquée pour l'utilisateur
+															
+	À part :
+	  - Voir si on peut créer nos images nous-même, comme ça on peut faire plusieurs images et faire un GIF propre qui remplacera le carousel ou avoir plusieurs images de même taille qui seront donc adaptées
+	  - Voir concernant le footer pour bien le foutre tout en bas avec masse <div> dans le base html twig
+-->
+
+		{% block body %}{% endblock %}
+
+		<footer class="navbar navbar-expand-lg navbar-dark bg-black">
+			<div class="container-fluid">
+				<div class="collapse navbar-collapse" id="navbarColor01">
+					<ul class="navbar-nav me-auto"></ul>
+					<ul class="navbar-nav justify-content-end">
+						<li class="nav-item">
+							<a class="nav-link text-white" href="{{path('mentions')}}">Mentions legales
 							</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="{{path('proshop')}}">Proshop</a>
+							<a class="nav-link text-white" href="{{path('propos')}}">À propos
+							</a>
 						</li>
 					</ul>
-					<ul class="navbar-nav justify-content-end">
-						<li class="nav-item dropdown">
-							<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Identification</a>
-							<div class="dropdown-menu">
-								<a class="dropdown-item" href="#">S'inscrire</a>
-								<a class="dropdown-item" href="#">Se connecter</a>
-								<div></li>
-							</ul>
-						</li>
-					</div>
 				</div>
-			</nav>
+			</div>
+		</footer>
 
-			<!-- 
-			1) Finir la gauche de la navbar :
-			    - Centrer le carousel dans le petit cadre
-			    - Régler le débordement sur la navbar
-			
-			2) Agrandir l'écriture des pages à la suite de la navbar
-			
-			3) Mettre un fond flou avec le parcours du golf
-			
-			4) Aller plus loin :
-			    - Analyser le contenu des "à propos" et "mentions légales" des sites, 
-			    - Comprendre
-			    - Créer ou copier coller
-			
-			5) Rendre la navbar qui est en bas dans un format "footer" en gardant le même visuel
-			
-			À part :
-			  - Voir si on peut créer nos images nous-même, comme ça on peut faire plusieurs images et faire un GIF propre qui remplacera le carousel ou avoir plusieurs images de même taille qui seront donc adaptées
-			  - Quand je vais mettre le fond du parcours de golf, il se peut que le fond soit trop grand, s'il va on peut s'en foutre ou non mais j'aimerai connaitre un peu mieux le fonctionnement dans le cas où ça ronge/rogne l'image
-			-->
-
-			{% block body %}{% endblock %}
-
-			<nav class="navbar navbar-expand-lg navbar-dark bg-black">
-				<div class="container-fluid">
-					<div class="collapse navbar-collapse" id="navbarColor01">
-						<ul class="navbar-nav me-auto"></ul>
-						<ul class="navbar-nav justify-content-end">
-							<li class="nav-item">
-								<a class="nav-link" href="#">Mentions légales</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="#">À propos</a>
-							</li>
-						</ul>
-					</div>
-				</div>
-			</nav>
-
-		</body>
 
 		{% block javascripts %}
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 		{% endblock %}
+
 	</body>
 </html>
+

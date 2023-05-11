@@ -23,4 +23,20 @@ class BaseController extends AbstractController
             
         ]);
     }
+
+    #[Route('/mentions-legales', name: 'mentions')]
+    public function mentions(): Response
+    {
+        return $this->render('base/mentions-legales.html.twig', [
+            
+        ]);
+    }
+
+    #[Route('/a-propos', name: 'propos')]
+    public function propos(): Response
+    {
+        return $this->render('base/a-propos.html.twig', [
+            
+        ]);
+    }
 }

@@ -1,155 +1,263 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{parent()}}Proshop{% endblock %}
+{% block title %}
+	{{parent()}}Proshop
+{% endblock %}
 
 {% block body %}
-    <h1 class="text-center text-primary mt-4 pt-4 display-1 fw-bold"> PROSHOP</h1>
-    <h2 class="text-center text-secondary mb-4 pb-4 display-2"> En construction ... </h2>
+	<h1 class="text-center text-primary mt-4 pt-4 display-1 fw-bold">
+		PROSHOP</h1>
+	<h3 class="text-center text-secondary mb-4 pb-4 display-2">
+		(pourquoi pas "Catalogue" ici) En construction ...
+	</h3>
 
-<div class="container">
-<div class="row mt-3">
-<h1> Clubs </h1>
+	<div class="container">
+		<div class="row mt-3">
+			<h1>
+				Tous les produits
+			</h1>
 
-<div class="card col m-1" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Driver</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <div class="d-flex flex-row-reverse">
-    <a href="#" class="btn btn-light m-1"> <img src="Img-proshop/favoris.png" title="Le produit n'est pas en favoris" alt="favoris" width="25" height="25"> </a>
-    <a href="#" class="btn btn-light m-1"> <img src="Img-proshop/panier.png" title="Le produit n'est pas dans votre panier" alt="panier" width="25" height="25"> </a>
-  </div>
-  </div>
-</div>
+			<div class="card col m-1" style="width: 18rem;">
+				<p class="card-text">
+					Retrouvez tous les produits présents sur notre site en appuyant ...
+				</p>
+				<div class="card-body">
+					<div class="container-fluid nav-item">
+						<div class="carousel slide carousel-fade" data-bs-ride="carousel" id="carousel">
+							<div class="carousel-inner ">
+								<div class="carousel-item active" data-bs-interval="2000">
+									<h5>
+										Clubs
+									</h5>
+									<img src="Img-navbar/Swing1-t.png" alt="golf1" width="100" height="100">
+								</div>
+								<div class="carousel-item" data-bs-interval="2000">
+									<h5>
+										Vêtements
+									</h5>
+									<img src="Img-navbar/Swing2-t.png" alt="golf2" width="100" height="100">
+								</div>
+								<div class="carousel-item" data-bs-interval="2000">
+									<img src="Img-navbar/Swing3-tb.png" alt="golf3" width="100" height="100">
+								</div>
+								<div class="carousel-item" data-bs-interval="2000">
+									<img src="Img-navbar/Swing4-t.png" alt="golf4" width="100" height="100">
+								</div>
+								<div class="carousel-item" data-bs-interval="2000">
+									<img src="Img-navbar/Swing5-t.png" alt="golf5" width="100" height="100">
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="d-flex flex-row-reverse">
+						<a href="#" class="btn btn-light m-1">
+							<img src="Img-proshop/favoris.png" title="Le produit n'est pas dans vos favoris" alt="favoris" width="25" height="25">
+						</a>
+						<a href="#" class="btn btn-light m-1">
+							<img src="Img-proshop/panier.png" title="Le produit n'est pas dans votre panier" alt="panier" width="25" height="25">
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row mt-3">
+				<h1>
+					Clubs
+				</h1>
 
-<div class="card col m-1" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Bois 3</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <div class="d-flex flex-row-reverse">
-    <a href="#" class="btn btn-light m-1"> <img src="Img-proshop/favoris.png" title="Le produit n'est pas en favoris" alt="favoris" width="25" height="25"> </a>
-    <a href="#" class="btn btn-light m-1"> <img src="Img-proshop/panier.png" title="Le produit n'est pas dans votre panier" alt="panier" width="25" height="25"> </a>
-  </div>
-  </div>
-</div>
-
-<div class="card col m-1" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Hybride</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <div class="d-flex flex-row-reverse">
-    <a href="#" class="btn btn-light m-1"> <img src="Img-proshop/favoris.png" title="Le produit n'est pas en favoris" alt="favoris" width="25" height="25"> </a>
-    <a href="#" class="btn btn-light m-1"> <img src="Img-proshop/panier.png" title="Le produit n'est pas dans votre panier" alt="panier" width="25" height="25"> </a>
-  </div>
-  </div>
-</div>
-
-<div class="card col m-1" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Fers</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <div class="d-flex flex-row-reverse">
-    <a href="#" class="btn btn-light m-1"> <img src="Img-proshop/favoris.png" title="Le produit n'est pas en favoris" alt="favoris" width="25" height="25"> </a>
-    <a href="#" class="btn btn-light m-1"> <img src="Img-proshop/panier.png" title="Le produit n'est pas dans votre panier" alt="panier" width="25" height="25"> </a>
-  </div>
-  </div>
-</div>
-
-<div class="card col m-1" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Wedge</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <div class="d-flex flex-row-reverse">
-    <a href="#" class="btn btn-light m-1"> <img src="Img-proshop/favoris.png" title="Le produit n'est pas en favoris" alt="favoris" width="25" height="25"> </a>
-    <a href="#" class="btn btn-light m-1"> <img src="Img-proshop/panier.png" title="Le produit n'est pas dans votre panier" alt="panier" width="25" height="25"> </a>
-  </div>
-  </div>
-</div>
-
-
-
-
-<div class="container">
-<div class="row mt-3">
-<h1> Vêtements </h1>
-
-<div class="card col m-1" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Casquette</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <div class="d-flex flex-row-reverse">
-    <a href="#" class="btn btn-light m-1"> <img src="Img-proshop/favoris.png" title="Le produit n'est pas en favoris" alt="favoris" width="25" height="25"> </a>
-    <a href="#" class="btn btn-light m-1"> <img src="Img-proshop/panier.png" title="Le produit n'est pas dans votre panier" alt="panier" width="25" height="25"> </a>
-  </div>
-  </div>
-</div>
+				<div class="card col m-1" style="width: 18rem;">
+					<img src="..." class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Driver</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<div class="d-flex justify-content-between">
+							<a href="#" class="btn btn-light m-1" title="Cliquez ici pour plus d'informations sur le produit">
+								<img src="Images/Img-proshop/info.png" alt="information" width="25" height="25">
+							</a>
+							<div class="d-flex flex-row-reverse">
+								<a href="#" class="btn btn-light m-1" title="Le produit n'est pas dans vos favoris">
+									<img src="Img-proshop/favoris.png" alt="favoris" width="25" height="25">
+								</a>
+								<a href="#" class="btn btn-light m-1" title="Le produit n'est pas dans votre panier">
+									<img src="Img-proshop/panier.png" alt="panier" width="25" height="25">
+								</a>
+							</div>
+						</div>
+					</div>
+				</div>
 
 
-<div class="card col m-1" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Manteau</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <div class="d-flex flex-row-reverse">
-    <a href="#" class="btn btn-light m-1"> <img src="Img-proshop/favoris.png" title="Le produit n'est pas en favoris" alt="favoris" width="25" height="25"> </a>
-    <a href="#" class="btn btn-light m-1"> <img src="Img-proshop/panier.png" title="Le produit n'est pas dans votre panier" alt="panier" width="25" height="25"> </a>
-  </div>
-  </div>
-</div>
+				<div class="card col m-1" style="width: 18rem;">
+					<img src="..." class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Bois 3</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<div class="d-flex flex-row-reverse">
+							<a href="#" class="btn btn-light m-1">
+								<img src="Img-proshop/favoris.png" title="Le produit n'est pas dans vos favoris" alt="favoris" width="25" height="25">
+							</a>
+							<a href="#" class="btn btn-light m-1">
+								<img src="Img-proshop/panier.png" title="Le produit n'est pas dans votre panier" alt="panier" width="25" height="25">
+							</a>
+						</div>
+					</div>
+				</div>
 
-<div class="card col m-1" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Polo</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <div class="d-flex flex-row-reverse">
-    <a href="#" class="btn btn-light m-1"> <img src="Img-proshop/favoris.png" title="Le produit n'est pas en favoris" alt="favoris" width="25" height="25"> </a>
-    <a href="#" class="btn btn-light m-1"> <img src="Img-proshop/panier.png" title="Le produit n'est pas dans votre panier" alt="panier" width="25" height="25"> </a>
-  </div>
-  </div>
-</div>
+				<div class="card col m-1" style="width: 18rem;">
+					<img src="..." class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Hybride</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<div class="d-flex flex-row-reverse">
+							<a href="#" class="btn btn-light m-1">
+								<img src="Img-proshop/favoris.png" title="Le produit n'est pas dans vos favoris" alt="favoris" width="25" height="25">
+							</a>
+							<a href="#" class="btn btn-light m-1">
+								<img src="Img-proshop/panier.png" title="Le produit n'est pas dans votre panier" alt="panier" width="25" height="25">
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="card col m-1" style="width: 18rem;">
+					<img src="..." class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Fers</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<div class="d-flex flex-row-reverse">
+							<a href="#" class="btn btn-light m-1">
+								<img src="Img-proshop/favoris.png" title="Le produit n'est pas dans vos favoris" alt="favoris" width="25" height="25">
+							</a>
+							<a href="#" class="btn btn-light m-1">
+								<img src="Img-proshop/panier.png" title="Le produit n'est pas dans votre panier" alt="panier" width="25" height="25">
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="card col m-1" style="width: 18rem;">
+					<img src="..." class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Wedge</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<div class="d-flex flex-row-reverse">
+							<a href="#" class="btn btn-light m-1">
+								<img src="Img-proshop/favoris.png" title="Le produit n'est pas dans vos favoris" alt="favoris" width="25" height="25">
+							</a>
+							<a href="#" class="btn btn-light m-1">
+								<img src="Img-proshop/panier.png" title="Le produit n'est pas dans votre panier" alt="panier" width="25" height="25">
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container">
+			<div class="row mt-3">
+				<h1>
+					Vêtements
+				</h1>
+
+				<div class="card col m-1" style="width: 18rem;">
+					<img src="..." class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Casquette</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<div class="d-flex flex-row-reverse">
+							<a href="#" class="btn btn-light m-1">
+								<img src="Img-proshop/favoris.png" title="Le produit n'est pas dans vos favoris" alt="favoris" width="25" height="25">
+							</a>
+							<a href="#" class="btn btn-light m-1">
+								<img src="Img-proshop/panier.png" title="Le produit n'est pas dans votre panier" alt="panier" width="25" height="25">
+							</a>
+						</div>
+					</div>
+				</div>
 
 
-<div class="card col m-1" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">CPantalon</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <div class="d-flex flex-row-reverse">
-    <a href="#" class="btn btn-light m-1"> <img src="Img-proshop/favoris.png" title="Le produit n'est pas en favoris" alt="favoris" width="25" height="25"> </a>
-    <a href="#" class="btn btn-light m-1"> <img src="Img-proshop/panier.png" title="Le produit n'est pas dans votre panier" alt="panier" width="25" height="25"> </a>
-  </div>
-  </div>
-</div>
+				<div class="card col m-1" style="width: 18rem;">
+					<img src="..." class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Manteau</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<div class="d-flex flex-row-reverse">
+							<a href="#" class="btn btn-light m-1">
+								<img src="Img-proshop/favoris.png" title="Le produit n'est pas dans vos favoris" alt="favoris" width="25" height="25">
+							</a>
+							<a href="#" class="btn btn-light m-1">
+								<img src="Img-proshop/panier.png" title="Le produit n'est pas dans votre panier" alt="panier" width="25" height="25">
+							</a>
+						</div>
+					</div>
+				</div>
+
+				<div class="card col m-1" style="width: 18rem;">
+					<img src="..." class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Polo</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<div class="d-flex flex-row-reverse">
+							<a href="#" class="btn btn-light m-1">
+								<img src="Img-proshop/favoris.png" title="Le produit n'est pas dans vos favoris" alt="favoris" width="25" height="25">
+							</a>
+							<a href="#" class="btn btn-light m-1">
+								<img src="Img-proshop/panier.png" title="Le produit n'est pas dans votre panier" alt="panier" width="25" height="25">
+							</a>
+						</div>
+					</div>
+				</div>
 
 
-<div class="card col m-1" style="width: 18rem;">
-  <img src="..." class="card-img-top" alt="...">
-  <div class="card-body">
-    <h5 class="card-title">Chaussures de golf</h5>
-    <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-  <div class="d-flex flex-row-reverse">
-    <a href="#" class="btn btn-light m-1"> <img src="Img-proshop/favoris.png" title="Le produit n'est pas en favoris" alt="favoris" width="25" height="25"> </a>
-    <a href="#" class="btn btn-light m-1"> <img src="Img-proshop/panier.png" title="Le produit n'est pas dans votre panier" alt="panier" width="25" height="25"> </a>
-  </div>
-  </div>
-</div>
+				<div class="card col m-1" style="width: 18rem;">
+					<img src="..." class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">CPantalon</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<div class="d-flex flex-row-reverse">
+							<a href="#" class="btn btn-light m-1">
+								<img src="Img-proshop/favoris.png" title="Le produit n'est pas dans vos favoris" alt="favoris" width="25" height="25">
+							</a>
+							<a href="#" class="btn btn-light m-1">
+								<img src="Img-proshop/panier.png" title="Le produit n'est pas dans votre panier" alt="panier" width="25" height="25">
+							</a>
+						</div>
+					</div>
+				</div>
 
-</div>
-</div>
 
-<!--
-    > Faire en sorte que le title du bouton s'affiche au passage de la souris partout sur le button et pas uniquement sur l'image (pas grave si je n'y arrive pas)
-    > Mettre les catégories de clubs / vêtements
-    > Peut-être mettre un dropdown sur la barre navigation avec la totalité des articles
-    > Créer les articles (card déjà présentes actuellement)
-    > Mettre une option à droite du nom pour afficher TOUS les produits pas en carousel mais format page
-    > Mettre un texte qui s'adapte en fonction de quand c'est en favoris ou pas "Retirer des favoris" "Ajouter aux favoris" lorsque l'on passe la souris
--->
+				<div class="card col m-1" style="width: 18rem;">
+					<img src="..." class="card-img-top" alt="...">
+					<div class="card-body">
+						<h5 class="card-title">Chaussures de golf</h5>
+						<p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+						<div class="d-flex flex-row-reverse">
+							<a href="#" class="btn btn-light m-1">
+								<img src="Img-proshop/favoris.png" title="Le produit n'est pas dans vos favoris" alt="favoris" width="25" height="25">
+							</a>
+							<a href="#" class="btn btn-light m-1">
+								<img src="Img-proshop/panier.png" title="Le produit n'est pas dans votre panier" alt="panier" width="25" height="25">
+							</a>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
+
+	<!--
+			    > Faire en sorte que le title du bouton s'affiche au passage de la souris partout sur le button et pas uniquement sur l'image (pas grave si je n'y arrive pas)
+			    > Mettre les catégories de clubs / vêtements
+			    > Peut-être mettre un dropdown sur la barre navigation avec la totalité des articles
+			    > Créer les articles (card déjà présentes actuellement)
+			    > Mettre une option à droite du nom pour afficher TOUS les produits pas en carousel mais format page
+			    > Mettre un texte qui s'adapte en fonction de quand c'est en favoris ou pas "Retirer des favoris" "Ajouter aux favoris" lorsque l'on passe la souris
+          > Risque de devoir refaire toutes les images avec le chemin qui commence par "Images/" quand je vais clear le cache.
+          > Faire un système de tri pour trouver des produits
+          > Première page = Catalogue (boutons de visite), ça amène à la page de la catégorie où là tous les produits de la catégorie seront répertoriés (boutons d'info, d'ajout dans le panier et de favoris)
+			-->
 
 {% endblock %}
+
