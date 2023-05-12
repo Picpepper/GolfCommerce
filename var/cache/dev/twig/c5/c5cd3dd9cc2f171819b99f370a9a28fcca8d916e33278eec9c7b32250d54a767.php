@@ -68,7 +68,7 @@ class __TwigTemplate_c62d9af11a5f2fc2577fa4f84a7ba6378963c62986756c1f3d503d65867
         echo "\">
 \t\t\t\t\tArras Golf
 \t\t\t\t\t<div class=\"container-fluid nav-item\">
-\t\t\t\t\t\t<img src=\"Images/img-navbar/swing.gif\" alt=\"GIF\">
+\t\t\t\t\t\t<img src=\"Images/Img-navbar/Swing.gif\" alt=\"Swing\" width=\"75\">
 \t\t\t\t\t</div>
 \t\t\t\t</a>
 \t\t\t\t<button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarColor01\" aria-controls=\"navbarColor01\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
@@ -122,30 +122,27 @@ class __TwigTemplate_c62d9af11a5f2fc2577fa4f84a7ba6378963c62986756c1f3d503d65867
 \t\t\t</div>
 \t\t</nav>
 
-\t\t<!-- 
-\t\t\t\t\t\t\t\t\t\t\t\t1) Finir la gauche de la navbar :
-\t\t\t\t\t\t\t\t\t\t\t\t    - Centrer le carousel dans le petit cadre
-\t\t\t\t\t\t\t\t\t\t\t\t    - Régler l'image de manière à ce qu'elle ne fasse pas son débordement lorsque ça passe à l'image suivante
+<!-- 
+\t1) Finir et régler la navbar :
+\t\t- Trouver la solution pour mettre l'identification à droite
 \t\t\t\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t\t\t\t3) Aller plus loin :
-\t\t\t\t\t\t\t\t\t\t\t\t    - Analyser le contenu des \"à propos\" et \"mentions légales\" des sites, 
-\t\t\t\t\t\t\t\t\t\t\t\t    - Comprendre
-\t\t\t\t\t\t\t\t\t\t\t\t    - Créer ou copier coller
+\t2) Aller plus loin :
+\t    - Analyser le contenu des \"à propos\" et \"mentions légales\" des sites, 
+\t    - Comprendre
+\t    - Créer ou copier coller
 \t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t\t\t\t4) Régler le \"Inscrivez-vous\"
-\t\t\t\t\t\t\t\t\t\t\t\t\t- Déjà, quand on ne met pas un mail ça met une erreur bizarer, j'aimerai que cette erreur se fasse autrement. Déjà savoir si c'est une erreur du code faite par le développeur ou juste une erreur indiquée pour l'utilisateur
-\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t\t\t\tÀ part :
-\t\t\t\t\t\t\t\t\t\t\t\t  - Voir si on peut créer nos images nous-même, comme ça on peut faire plusieurs images et faire un GIF propre qui remplacera le carousel ou avoir plusieurs images de même taille qui seront donc adaptées
-\t\t\t\t\t\t\t\t\t\t\t\t  - Quand je vais mettre le fond du parcours de golf, il se peut que le fond soit trop grand, s'il va on peut s'en foutre ou non mais j'aimerai connaitre un peu mieux le fonctionnement dans le cas où ça ronge/rogne l'image
-\t\t\t\t\t\t\t\t\t\t\t\t-->
+\t4) Régler le \"Inscrivez-vous\"
+\t\t- Déjà, quand on ne met pas un mail ça met une erreur bizarre, j'aimerai que cette erreur se fasse autrement. Déjà savoir si c'est une erreur du code faite par le développeur ou juste une erreur indiquée pour l'utilisateur
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
+\tÀ part :
+\t  - Remplacer le GIF par webm ça n'accepte pas les fonds transparents les GIF et redimensionner l'image
+\t  - Voir concernant le footer pour bien le foutre tout en bas avec masse <div> dans le base html twig
+-->
 
 \t\t";
-        // line 107
+        // line 104
         $this->displayBlock('body', $context, $blocks);
-        // line 108
+        // line 105
         echo "
 \t\t<footer class=\"navbar navbar-expand-lg navbar-dark bg-black\">
 \t\t\t<div class=\"container-fluid\">
@@ -154,14 +151,14 @@ class __TwigTemplate_c62d9af11a5f2fc2577fa4f84a7ba6378963c62986756c1f3d503d65867
 \t\t\t\t\t<ul class=\"navbar-nav justify-content-end\">
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"";
-        // line 115
+        // line 112
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("mentions");
         echo "\">Mentions legales
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"";
-        // line 119
+        // line 116
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("propos");
         echo "\">À propos
 \t\t\t\t\t\t\t</a>
@@ -173,11 +170,10 @@ class __TwigTemplate_c62d9af11a5f2fc2577fa4f84a7ba6378963c62986756c1f3d503d65867
 
 
 \t\t";
-        // line 128
+        // line 125
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 131
-        echo "
-\t</body>
+        // line 128
+        echo "\t</body>
 </html>
 
 ";
@@ -245,7 +241,7 @@ footer {
 
     }
 
-    // line 107
+    // line 104
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -257,14 +253,14 @@ footer {
 
     }
 
-    // line 128
+    // line 125
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 129
+        // line 126
         echo "\t\t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ\" crossorigin=\"anonymous\"></script>
 \t\t";
         
@@ -284,7 +280,7 @@ footer {
 
     public function getDebugInfo()
     {
-        return array (  268 => 129,  261 => 128,  249 => 107,  235 => 41,  197 => 8,  190 => 7,  179 => 131,  177 => 128,  165 => 119,  158 => 115,  149 => 108,  147 => 107,  120 => 82,  112 => 77,  109 => 76,  101 => 71,  96 => 69,  90 => 65,  88 => 64,  82 => 61,  67 => 49,  59 => 43,  57 => 41,  54 => 40,  52 => 7,  44 => 1,);
+        return array (  264 => 126,  257 => 125,  245 => 104,  231 => 41,  193 => 8,  186 => 7,  176 => 128,  174 => 125,  162 => 116,  155 => 112,  146 => 105,  144 => 104,  120 => 82,  112 => 77,  109 => 76,  101 => 71,  96 => 69,  90 => 65,  88 => 64,  82 => 61,  67 => 49,  59 => 43,  57 => 41,  54 => 40,  52 => 7,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -340,7 +336,7 @@ footer {
 \t\t\t\t<a class=\"navbar-brand text-center\" href=\"{{path('index')}}\">
 \t\t\t\t\tArras Golf
 \t\t\t\t\t<div class=\"container-fluid nav-item\">
-\t\t\t\t\t\t<img src=\"Images/img-navbar/swing.gif\" alt=\"GIF\">
+\t\t\t\t\t\t<img src=\"Images/Img-navbar/Swing.gif\" alt=\"Swing\" width=\"75\">
 \t\t\t\t\t</div>
 \t\t\t\t</a>
 \t\t\t\t<button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarColor01\" aria-controls=\"navbarColor01\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">
@@ -375,25 +371,22 @@ footer {
 \t\t\t</div>
 \t\t</nav>
 
-\t\t<!-- 
-\t\t\t\t\t\t\t\t\t\t\t\t1) Finir la gauche de la navbar :
-\t\t\t\t\t\t\t\t\t\t\t\t    - Centrer le carousel dans le petit cadre
-\t\t\t\t\t\t\t\t\t\t\t\t    - Régler l'image de manière à ce qu'elle ne fasse pas son débordement lorsque ça passe à l'image suivante
+<!-- 
+\t1) Finir et régler la navbar :
+\t\t- Trouver la solution pour mettre l'identification à droite
 \t\t\t\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t\t\t\t3) Aller plus loin :
-\t\t\t\t\t\t\t\t\t\t\t\t    - Analyser le contenu des \"à propos\" et \"mentions légales\" des sites, 
-\t\t\t\t\t\t\t\t\t\t\t\t    - Comprendre
-\t\t\t\t\t\t\t\t\t\t\t\t    - Créer ou copier coller
+\t2) Aller plus loin :
+\t    - Analyser le contenu des \"à propos\" et \"mentions légales\" des sites, 
+\t    - Comprendre
+\t    - Créer ou copier coller
 \t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t\t\t\t4) Régler le \"Inscrivez-vous\"
-\t\t\t\t\t\t\t\t\t\t\t\t\t- Déjà, quand on ne met pas un mail ça met une erreur bizarer, j'aimerai que cette erreur se fasse autrement. Déjà savoir si c'est une erreur du code faite par le développeur ou juste une erreur indiquée pour l'utilisateur
-\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t\t\t\tÀ part :
-\t\t\t\t\t\t\t\t\t\t\t\t  - Voir si on peut créer nos images nous-même, comme ça on peut faire plusieurs images et faire un GIF propre qui remplacera le carousel ou avoir plusieurs images de même taille qui seront donc adaptées
-\t\t\t\t\t\t\t\t\t\t\t\t  - Quand je vais mettre le fond du parcours de golf, il se peut que le fond soit trop grand, s'il va on peut s'en foutre ou non mais j'aimerai connaitre un peu mieux le fonctionnement dans le cas où ça ronge/rogne l'image
-\t\t\t\t\t\t\t\t\t\t\t\t-->
+\t4) Régler le \"Inscrivez-vous\"
+\t\t- Déjà, quand on ne met pas un mail ça met une erreur bizarre, j'aimerai que cette erreur se fasse autrement. Déjà savoir si c'est une erreur du code faite par le développeur ou juste une erreur indiquée pour l'utilisateur
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
+\tÀ part :
+\t  - Remplacer le GIF par webm ça n'accepte pas les fonds transparents les GIF et redimensionner l'image
+\t  - Voir concernant le footer pour bien le foutre tout en bas avec masse <div> dans le base html twig
+-->
 
 \t\t{% block body %}{% endblock %}
 
@@ -419,7 +412,6 @@ footer {
 \t\t{% block javascripts %}
 \t\t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ\" crossorigin=\"anonymous\"></script>
 \t\t{% endblock %}
-
 \t</body>
 </html>
 

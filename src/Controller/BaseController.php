@@ -24,6 +24,14 @@ class BaseController extends AbstractController
         ]);
     }
 
+    #[Route('/catalogue', name: 'catalogue')]
+    public function catalogue(): Response
+    {
+        return $this->render('base/catalogue.html.twig', [
+            
+        ]);
+    }
+
     #[Route('/mentions-legales', name: 'mentions')]
     public function mentions(): Response
     {

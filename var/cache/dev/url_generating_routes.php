@@ -4,8 +4,11 @@
 
 return [
     'proshop' => [[], ['_controller' => 'App\\Controller\\BaseController::proshop'], [], [['text', '/proshop']], [], [], []],
+    'catalogue' => [[], ['_controller' => 'App\\Controller\\BaseController::catalogue'], [], [['text', '/catalogue']], [], [], []],
     'mentions' => [[], ['_controller' => 'App\\Controller\\BaseController::mentions'], [], [['text', '/mentions-legales']], [], [], []],
     'propos' => [[], ['_controller' => 'App\\Controller\\BaseController::propos'], [], [['text', '/a-propos']], [], [], []],
+    'app_favoris' => [[], ['_controller' => 'App\\Controller\\FavorisController::index'], [], [['text', '/favoris']], [], [], []],
+    'app_panier' => [[], ['_controller' => 'App\\Controller\\PanierController::index'], [], [['text', '/panier']], [], [], []],
     'app_register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], [], []],
     'app_verify_email' => [[], ['_controller' => 'App\\Controller\\RegistrationController::verifyUserEmail'], [], [['text', '/verify/email']], [], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], [], []],

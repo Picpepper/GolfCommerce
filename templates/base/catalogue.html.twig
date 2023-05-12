@@ -1,0 +1,449 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+	{{parent()}}Proshop
+{% endblock %}
+
+
+{% block body %}
+<style>
+.gradient-text {
+  background-image: linear-gradient(to right, #00bfff, #32cd32);
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+h5{
+	font-family: 'Herbe';
+	src: url('templates/Herbe.ttf') format('woff');
+	font-weight : bold;
+	color: #7CFC00;
+}
+</style>
+
+	<h1 class="text-center gradient-text mt-4 pt-4 display-1 fw-bold">
+		PROSHOP</h1>
+	<h3 class="text-center gradient-text mb-4 pb-4 display-2">
+		Catalogue
+	</h3>
+
+	<div class="container">
+<div class="row mt-3">
+	<h1 class="gradient-text">
+		Tous les produits
+	</h1>
+	<div class="card col m-1" style="width: 18rem;">
+		<div class="card-body">
+			<div class="container-fluid nav-item">
+				<div id="Produits" class="carousel slide">
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#Produits" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+						<button type="button" data-bs-target="#Produits" data-bs-slide-to="1" aria-label="Slide 2"></button>
+						<button type="button" data-bs-target="#Produits" data-bs-slide-to="2" aria-label="Slide 3"></button>
+					</div>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="Images/Img-proshop/drivers.jpeg" class="w-20" alt="Driver">
+							<img src="Images/Img-proshop/bois.png" class="w-20" alt="Bois">
+							<img src="Images/Img-proshop/hybride.jpeg" class="w-20" alt="Hybride">
+							<img src="Images/Img-proshop/fers.jpeg" class="w-20" alt="Fers">
+							<img src="Images/Img-proshop/putter.jpeg" class="w-20" alt="Putter">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Clubs de golf</h5>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="..." class="d-block w-100" alt="...">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Tenues vestimentaires</h5>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="..." class="d-block w-100" alt="...">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Accessoires</h5>
+							</div>
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#Produits" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#Produits" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="d-flex flex-row-reverse">
+		<a href="#" class="btn btn-light m-1">
+			<img src="Images/Img-proshop/fleche.png" title="Se rendre dans la catégorie" alt="Produits" width="25" height="25">
+		</a>
+	</div>
+</div>
+
+
+<div class="row mt-3">
+	<h1 class="gradient-text">
+		Clubs de golf
+	</h1>
+	<div class="card col m-1" style="width: 18rem;">
+		<div class="card-body">
+			<div class="container-fluid nav-item">
+				<div id="Clubs" class="carousel slide">
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#Clubs" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+						<button type="button" data-bs-target="#Clubs" data-bs-slide-to="1" aria-label="Slide 2"></button>
+						<button type="button" data-bs-target="#Clubs" data-bs-slide-to="2" aria-label="Slide 3"></button>
+						<button type="button" data-bs-target="#Clubs" data-bs-slide-to="3" aria-label="Slide 4"></button>
+						<button type="button" data-bs-target="#Clubs" data-bs-slide-to="4" aria-label="Slide 5"></button>
+					</div>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="Images/Img-proshop/drivers.jpeg" class="w-100" alt="Driver">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Driver</h5>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="Images/Img-proshop/bois.png" class="w-100" alt="Bois">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Bois</h5>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="Images/Img-proshop/hybride.jpeg" class="w-100" alt="Hybride">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Hybride</h5>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="Images/Img-proshop/fers.jpeg" class="w-100" alt="Fers">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Fers</h5>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="Images/Img-proshop/putter.jpeg" class="w-100" alt="Putter">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Putter</h5>
+							</div>
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#Clubs" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#Clubs" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="d-flex flex-row-reverse">
+		<a href="#" class="btn btn-light m-1">
+			<img src="Images/Img-proshop/fleche.png" title="Se rendre dans la catégorie" alt="Clubs" width="25" height="25">
+		</a>
+	</div>
+</div>
+
+<div class="row mt-3">
+	<h1 class="gradient-text">
+		Tenues vestimentaires
+	</h1>
+	<div class="card col m-1" style="width: 18rem;">
+		<div class="card-body">
+			<div class="container-fluid nav-item">
+				<div id="Tenues" class="carousel slide">
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#Tenues" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+						<button type="button" data-bs-target="#Tenues" data-bs-slide-to="1" aria-label="Slide 2"></button>
+						<button type="button" data-bs-target="#Tenues" data-bs-slide-to="2" aria-label="Slide 3"></button>
+					</div>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="..." class="d-block w-100" alt="...">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>First slide label</h5>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="..." class="d-block w-100" alt="...">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Second slide label</h5>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="..." class="d-block w-100" alt="...">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Third slide label</h5>
+							</div>
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#Tenues" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#Tenues" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="d-flex flex-row-reverse">
+		<a href="#" class="btn btn-light m-1">
+			<img src="Images/Img-proshop/fleche.png" title="Se rendre dans la catégorie" alt="Vêtements" width="25" height="25">
+		</a>
+	</div>
+</div>
+
+<div class="row mt-3">
+	<h1 class="gradient-text">
+		Accessoires
+	</h1>
+	<div class="card col m-1" style="width: 18rem;">
+		<div class="card-body">
+			<div class="container-fluid nav-item">
+				<div id="carouselExampleCaptions" class="carousel slide">
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+					</div>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="..." class="d-block w-100" alt="...">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>First slide label</h5>
+								<p>Some representative placeholder content for the first slide.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="..." class="d-block w-100" alt="...">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Second slide label</h5>
+								<p>Some representative placeholder content for the second slide.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="..." class="d-block w-100" alt="...">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Third slide label</h5>
+								<p>Some representative placeholder content for the third slide.</p>
+							</div>
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="d-flex flex-row-reverse">
+		<a href="#" class="btn btn-light m-1">
+			<img src="Images/Img-proshop/fleche.png" title="Se rendre dans la catégorie" alt="." width="25" height="25">
+		</a>
+	</div>
+</div>
+
+<div class="row mt-3">
+	<h1 class="gradient-text">
+		Chariots de golf
+	</h1>
+	<div class="card col m-1" style="width: 18rem;">
+		<div class="card-body">
+			<div class="container-fluid nav-item">
+				<div id="carouselExampleCaptions" class="carousel slide">
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+					</div>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="..." class="d-block w-100" alt="...">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>First slide label</h5>
+								<p>Some representative placeholder content for the first slide.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="..." class="d-block w-100" alt="...">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Second slide label</h5>
+								<p>Some representative placeholder content for the second slide.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="..." class="d-block w-100" alt="...">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Third slide label</h5>
+								<p>Some representative placeholder content for the third slide.</p>
+							</div>
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="d-flex flex-row-reverse">
+		<a href="#" class="btn btn-light m-1">
+			<img src="Images/Img-proshop/fleche.png" title="Se rendre dans la catégorie" alt="." width="25" height="25">
+		</a>
+	</div>
+</div>
+
+<div class="row mt-3">
+	<h1 class="gradient-text">
+		Sacs de golf
+	</h1>
+	<div class="card col m-1" style="width: 18rem;">
+		<div class="card-body">
+			<div class="container-fluid nav-item">
+				<div id="carouselExampleCaptions" class="carousel slide">
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+					</div>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="..." class="d-block w-100" alt="...">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>First slide label</h5>
+								<p>Some representative placeholder content for the first slide.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="..." class="d-block w-100" alt="...">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Second slide label</h5>
+								<p>Some representative placeholder content for the second slide.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="..." class="d-block w-100" alt="...">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Third slide label</h5>
+								<p>Some representative placeholder content for the third slide.</p>
+							</div>
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="d-flex flex-row-reverse">
+		<a href="#" class="btn btn-light m-1">
+			<img src="Images/Img-proshop/fleche.png" title="Se rendre dans la catégorie" alt="." width="25" height="25">
+		</a>
+	</div>
+</div>
+
+<div class="row mt-3">
+	<h1 class="gradient-text">
+		Balles de golf
+	</h1>
+	<div class="card col m-1" style="width: 18rem;">
+		<div class="card-body">
+			<div class="container-fluid nav-item">
+				<div id="carouselExampleCaptions" class="carousel slide">
+					<div class="carousel-indicators">
+						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+						<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+					</div>
+					<div class="carousel-inner">
+						<div class="carousel-item active">
+							<img src="..." class="d-block w-100" alt="...">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>First slide label</h5>
+								<p>Some representative placeholder content for the first slide.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="..." class="d-block w-100" alt="...">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Second slide label</h5>
+								<p>Some representative placeholder content for the second slide.</p>
+							</div>
+						</div>
+						<div class="carousel-item">
+							<img src="..." class="d-block w-100" alt="...">
+							<div class="carousel-caption d-none d-md-block">
+								<h5>Third slide label</h5>
+								<p>Some representative placeholder content for the third slide.</p>
+							</div>
+						</div>
+					</div>
+					<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+						<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Previous</span>
+					</button>
+					<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+						<span class="carousel-control-next-icon" aria-hidden="true"></span>
+						<span class="visually-hidden">Next</span>
+					</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="d-flex flex-row-reverse">
+		<a href="#" class="btn btn-light m-1">
+			<img src="Images/Img-proshop/fleche.png" title="Se rendre dans la catégorie" alt="." width="25" height="25">
+		</a>
+	</div>
+</div>
+</div>
+
+
+	<!--
+	> Faire en sorte que le title du bouton s'affiche au passage de la souris partout sur le button et pas uniquement sur l'image (pas grave si je n'y arrive pas)
+	> Mettre les catégories de clubs / vêtements
+	> Peut-être mettre un dropdown sur la barre navigation avec la totalité des articles
+	> Créer les articles (card déjà présentes actuellement)
+	> Mettre une option à droite du nom pour afficher TOUS les produits pas en carousel mais format page
+	> Mettre un texte qui s'adapte en fonction de quand c'est en favoris ou pas "Retirer des favoris" "Ajouter aux favoris" lorsque l'on passe la souris
+	> Faire un système de tri pour trouver des produits
+	> Première page = Catalogue (boutons de visite), ça amène à la page de la catégorie où là tous les produits de la catégorie seront répertoriés (boutons d'info, d'ajout dans le panier et de favoris)
+	
+	Concernant les rôles :
+	> Administrateur (Hauts placés qui peuvent gérer les permissions et donner les rôles aux salariés tout en pouvant personnaliser ses fonctions)
+	> Salarié (Peut gérer les promos, ajouter un produit, retirer un produit grâce à un formulaire)
+	> Utilisateur (Est le client)
+											
+	> Si on va plus loin, les membres mais dans le cas d'un site hors commerce.
+	-->
+
+{% endblock %}
+

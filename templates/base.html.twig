@@ -49,7 +49,7 @@ footer {
 				<a class="navbar-brand text-center" href="{{path('index')}}">
 					Arras Golf
 					<div class="container-fluid nav-item">
-						<img src="Images/img-navbar/swing.gif" alt="GIF">
+						<img src="Images/Img-navbar/Swing.gif" alt="Swing" width="75">
 					</div>
 				</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
@@ -86,8 +86,6 @@ footer {
 
 <!-- 
 	1) Finir et régler la navbar :
-		- Soit le carousel avec les images, soit trouver une solution par rapport au GIF
-		- Si carousel, voir pour virer l'effet dégueu de transition qui réaggrandi l'image pendant peu de temps
 		- Trouver la solution pour mettre l'identification à droite
 												
 	2) Aller plus loin :
@@ -96,10 +94,10 @@ footer {
 	    - Créer ou copier coller
 									
 	4) Régler le "Inscrivez-vous"
-		- Déjà, quand on ne met pas un mail ça met une erreur bizarer, j'aimerai que cette erreur se fasse autrement. Déjà savoir si c'est une erreur du code faite par le développeur ou juste une erreur indiquée pour l'utilisateur
+		- Déjà, quand on ne met pas un mail ça met une erreur bizarre, j'aimerai que cette erreur se fasse autrement. Déjà savoir si c'est une erreur du code faite par le développeur ou juste une erreur indiquée pour l'utilisateur
 															
 	À part :
-	  - Voir si on peut créer nos images nous-même, comme ça on peut faire plusieurs images et faire un GIF propre qui remplacera le carousel ou avoir plusieurs images de même taille qui seront donc adaptées
+	  - Remplacer le GIF par webm ça n'accepte pas les fonds transparents les GIF et redimensionner l'image
 	  - Voir concernant le footer pour bien le foutre tout en bas avec masse <div> dans le base html twig
 -->
 
@@ -127,7 +125,6 @@ footer {
 		{% block javascripts %}
 			<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 		{% endblock %}
-
 	</body>
 </html>
 
