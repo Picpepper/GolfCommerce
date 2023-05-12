@@ -50,20 +50,51 @@ class __TwigTemplate_c62d9af11a5f2fc2577fa4f84a7ba6378963c62986756c1f3d503d65867
 \t\t";
         // line 7
         $this->displayBlock('stylesheets', $context, $blocks);
-        // line 40
+        // line 12
         echo "\t\t<title>
 \t\t\t";
-        // line 41
+        // line 13
         $this->displayBlock('title', $context, $blocks);
-        // line 43
+        // line 15
         echo "\t\t</title>
 \t</head>
 
 \t<body>
+\t<style>
+body {
+    background-image: url('Images/arras-golf.jpg');
+    background-size: cover;
+    margin: 0; /* réinitialisation des marges par défaut du navigateur */
+    padding: 0; /* réinitialisation des marges internes par défaut du navigateur */
+    display: flex;
+  \tmin-height: 100vh;
+  \tflex-direction: column;
+    position: relative; /* permet de positionner les éléments enfants par rapport à ce conteneur */
+}
+
+body::before {
+    content: \"\";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('Images/arras-golf.jpg');
+    background-size: cover;
+    filter: blur(5px);
+    z-index: -1;
+}
+
+footer {
+  height: 25px;
+  background-color: #f2f2f2;
+  margin-top: auto;
+}
+</style>
 \t\t<nav class=\"navbar navbar-expand-lg navbar-dark bg-black\">
 \t\t\t<div class=\"container-fluid\">
 \t\t\t\t<a class=\"navbar-brand text-center\" href=\"";
-        // line 49
+        // line 52
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("index");
         echo "\">
 \t\t\t\t\tArras Golf
@@ -78,26 +109,33 @@ class __TwigTemplate_c62d9af11a5f2fc2577fa4f84a7ba6378963c62986756c1f3d503d65867
 \t\t\t\t\t<ul class=\"navbar-nav me-auto\">
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"";
-        // line 61
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("proshop");
+        // line 64
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("catalogue");
         echo "\">Proshop
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</li>
+\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"";
+        // line 68
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("test");
+        echo "\">Test
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t</li>
 \t\t\t\t\t\t";
-        // line 64
+        // line 71
         if ( !$this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 65
+            // line 72
             echo "\t\t\t\t\t\t<div class=\"d-flex flex-row-reverse\">
 \t\t\t\t\t\t\t<li class=\"nav-item dropdown\">
 \t\t\t\t\t\t\t\t<a class=\"nav-link dropdown-toggle text-white\" data-bs-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Identification</a>
 \t\t\t\t\t\t\t\t<div class=\"dropdown-menu\">
 \t\t\t\t\t\t\t\t\t<a class=\"dropdown-item text-black\" href=\"";
-            // line 69
+            // line 76
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\">Se connecter
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t<a class=\"dropdown-item text-black\" href=\"";
-            // line 71
+            // line 78
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             echo "\">S'inscrire
 \t\t\t\t\t\t\t\t\t</a>
@@ -105,10 +143,10 @@ class __TwigTemplate_c62d9af11a5f2fc2577fa4f84a7ba6378963c62986756c1f3d503d65867
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t";
         } else {
-            // line 76
+            // line 83
             echo "\t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"";
-            // line 77
+            // line 84
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\">
 \t\t\t\t\t\t\t\t\t<i class=\"bi bi-x-circle-fill text-white\"></i>
@@ -116,7 +154,7 @@ class __TwigTemplate_c62d9af11a5f2fc2577fa4f84a7ba6378963c62986756c1f3d503d65867
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t";
         }
-        // line 82
+        // line 89
         echo "\t\t\t\t\t</ul>
 \t\t\t\t</div>
 \t\t\t</div>
@@ -135,14 +173,13 @@ class __TwigTemplate_c62d9af11a5f2fc2577fa4f84a7ba6378963c62986756c1f3d503d65867
 \t\t- Déjà, quand on ne met pas un mail ça met une erreur bizarre, j'aimerai que cette erreur se fasse autrement. Déjà savoir si c'est une erreur du code faite par le développeur ou juste une erreur indiquée pour l'utilisateur
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \tÀ part :
-\t  - Remplacer le GIF par webm ça n'accepte pas les fonds transparents les GIF et redimensionner l'image
 \t  - Voir concernant le footer pour bien le foutre tout en bas avec masse <div> dans le base html twig
 -->
 
 \t\t";
-        // line 104
+        // line 110
         $this->displayBlock('body', $context, $blocks);
-        // line 105
+        // line 111
         echo "
 \t\t<footer class=\"navbar navbar-expand-lg navbar-dark bg-black\">
 \t\t\t<div class=\"container-fluid\">
@@ -151,14 +188,14 @@ class __TwigTemplate_c62d9af11a5f2fc2577fa4f84a7ba6378963c62986756c1f3d503d65867
 \t\t\t\t\t<ul class=\"navbar-nav justify-content-end\">
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"";
-        // line 112
+        // line 118
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("mentions");
         echo "\">Mentions legales
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"";
-        // line 116
+        // line 122
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("propos");
         echo "\">À propos
 \t\t\t\t\t\t\t</a>
@@ -170,9 +207,9 @@ class __TwigTemplate_c62d9af11a5f2fc2577fa4f84a7ba6378963c62986756c1f3d503d65867
 
 
 \t\t";
-        // line 125
+        // line 131
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 128
+        // line 134
         echo "\t</body>
 </html>
 
@@ -193,41 +230,13 @@ class __TwigTemplate_c62d9af11a5f2fc2577fa4f84a7ba6378963c62986756c1f3d503d65867
         echo "\t\t\t<!-- Bootstrap CSS -->
 \t\t\t<link href=\"https://bootswatch.com/5/lumen/bootstrap.min.css\" rel=\"stylesheet\">
 
-<style>
-body {
-    background-image: url('Images/arras-golf.jpg');
-    background-size: cover;
-    margin: 0; /* réinitialisation des marges par défaut du navigateur */
-    padding: 0; /* réinitialisation des marges internes par défaut du navigateur */
-    min-height: 100vh; /* spécifie la hauteur minimale de la page à 100% de la hauteur de la vue */
-    position: relative; /* permet de positionner les éléments enfants par rapport à ce conteneur */
-}
-
-body::before {
-    content: \"\";
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('Images/arras-golf.jpg');
-    background-size: cover;
-    filter: blur(5px);
-    z-index: -1;
-}
-
-footer {
-  height: 25px;
-  background-color: #f2f2f2;
-}
-</style>
 \t\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
 
     }
 
-    // line 41
+    // line 13
     public function block_title($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -241,7 +250,7 @@ footer {
 
     }
 
-    // line 104
+    // line 110
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -253,14 +262,14 @@ footer {
 
     }
 
-    // line 125
+    // line 131
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 126
+        // line 132
         echo "\t\t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ\" crossorigin=\"anonymous\"></script>
 \t\t";
         
@@ -280,7 +289,7 @@ footer {
 
     public function getDebugInfo()
     {
-        return array (  264 => 126,  257 => 125,  245 => 104,  231 => 41,  193 => 8,  186 => 7,  176 => 128,  174 => 125,  162 => 116,  155 => 112,  146 => 105,  144 => 104,  120 => 82,  112 => 77,  109 => 76,  101 => 71,  96 => 69,  90 => 65,  88 => 64,  82 => 61,  67 => 49,  59 => 43,  57 => 41,  54 => 40,  52 => 7,  44 => 1,);
+        return array (  273 => 132,  266 => 131,  254 => 110,  240 => 13,  230 => 8,  223 => 7,  213 => 134,  211 => 131,  199 => 122,  192 => 118,  183 => 111,  181 => 110,  158 => 89,  150 => 84,  147 => 83,  139 => 78,  134 => 76,  128 => 72,  126 => 71,  120 => 68,  113 => 64,  98 => 52,  59 => 15,  57 => 13,  54 => 12,  52 => 7,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -295,13 +304,23 @@ footer {
 \t\t\t<!-- Bootstrap CSS -->
 \t\t\t<link href=\"https://bootswatch.com/5/lumen/bootstrap.min.css\" rel=\"stylesheet\">
 
-<style>
+\t\t{% endblock %}
+\t\t<title>
+\t\t\t{% block title %}Golf -
+\t\t\t{% endblock %}
+\t\t</title>
+\t</head>
+
+\t<body>
+\t<style>
 body {
     background-image: url('Images/arras-golf.jpg');
     background-size: cover;
     margin: 0; /* réinitialisation des marges par défaut du navigateur */
     padding: 0; /* réinitialisation des marges internes par défaut du navigateur */
-    min-height: 100vh; /* spécifie la hauteur minimale de la page à 100% de la hauteur de la vue */
+    display: flex;
+  \tmin-height: 100vh;
+  \tflex-direction: column;
     position: relative; /* permet de positionner les éléments enfants par rapport à ce conteneur */
 }
 
@@ -321,16 +340,9 @@ body::before {
 footer {
   height: 25px;
   background-color: #f2f2f2;
+  margin-top: auto;
 }
 </style>
-\t\t{% endblock %}
-\t\t<title>
-\t\t\t{% block title %}Golf -
-\t\t\t{% endblock %}
-\t\t</title>
-\t</head>
-
-\t<body>
 \t\t<nav class=\"navbar navbar-expand-lg navbar-dark bg-black\">
 \t\t\t<div class=\"container-fluid\">
 \t\t\t\t<a class=\"navbar-brand text-center\" href=\"{{path('index')}}\">
@@ -345,7 +357,11 @@ footer {
 \t\t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
 \t\t\t\t\t<ul class=\"navbar-nav me-auto\">
 \t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"{{path('proshop')}}\">Proshop
+\t\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"{{path('catalogue')}}\">Proshop
+\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t</li>
+\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"{{path('test')}}\">Test
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t{% if not is_granted('IS_AUTHENTICATED_FULLY') %}
@@ -384,7 +400,6 @@ footer {
 \t\t- Déjà, quand on ne met pas un mail ça met une erreur bizarre, j'aimerai que cette erreur se fasse autrement. Déjà savoir si c'est une erreur du code faite par le développeur ou juste une erreur indiquée pour l'utilisateur
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \tÀ part :
-\t  - Remplacer le GIF par webm ça n'accepte pas les fonds transparents les GIF et redimensionner l'image
 \t  - Voir concernant le footer pour bien le foutre tout en bas avec masse <div> dans le base html twig
 -->
 

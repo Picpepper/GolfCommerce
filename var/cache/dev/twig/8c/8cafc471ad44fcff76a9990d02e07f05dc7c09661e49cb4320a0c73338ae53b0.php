@@ -85,7 +85,7 @@ class __TwigTemplate_052b8122459c2efd633f08a365b5596a97031936b4088749067ef973e85
 
 h5{
 \tfont-family: 'Herbe';
-\tsrc: url('templates/Herbe.ttf') format('woff');
+\tsrc: url('public/templates/Herbe.ttf') format('woff');
 \tfont-weight : bold;
 \tcolor: #7CFC00;
 }
@@ -555,7 +555,7 @@ h5{
 
 h5{
 \tfont-family: 'Herbe';
-\tsrc: url('templates/Herbe.ttf') format('woff');
+\tsrc: url('public/templates/Herbe.ttf') format('woff');
 \tfont-weight : bold;
 \tcolor: #7CFC00;
 }

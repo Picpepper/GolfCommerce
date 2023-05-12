@@ -336,7 +336,7 @@ class __TwigTemplate_7375e52405e231dad368d5de5f2b85613b921acd4fe4ff94eaef06d57ec
 
 
 <!--
-> Faire en sorte que le title du bouton s'affiche au passage de la souris partout sur le button et pas uniquement sur l'image (pas grave si je n'y arrive pas)
+> Faire en sorte que le title du bouton s'affiche au passage de la souris partout sur le button et pas uniquement sur l'image
 > Mettre les catégories de clubs / vêtements
 > Peut-être mettre un dropdown sur la barre navigation avec la totalité des articles
 > Créer les articles (card déjà présentes actuellement)
@@ -646,7 +646,7 @@ Concernant les rôles :
 
 
 <!--
-> Faire en sorte que le title du bouton s'affiche au passage de la souris partout sur le button et pas uniquement sur l'image (pas grave si je n'y arrive pas)
+> Faire en sorte que le title du bouton s'affiche au passage de la souris partout sur le button et pas uniquement sur l'image
 > Mettre les catégories de clubs / vêtements
 > Peut-être mettre un dropdown sur la barre navigation avec la totalité des articles
 > Créer les articles (card déjà présentes actuellement)

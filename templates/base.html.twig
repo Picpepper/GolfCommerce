@@ -8,13 +8,23 @@
 			<!-- Bootstrap CSS -->
 			<link href="https://bootswatch.com/5/lumen/bootstrap.min.css" rel="stylesheet">
 
-<style>
+		{% endblock %}
+		<title>
+			{% block title %}Golf -
+			{% endblock %}
+		</title>
+	</head>
+
+	<body>
+	<style>
 body {
     background-image: url('Images/arras-golf.jpg');
     background-size: cover;
     margin: 0; /* réinitialisation des marges par défaut du navigateur */
     padding: 0; /* réinitialisation des marges internes par défaut du navigateur */
-    min-height: 100vh; /* spécifie la hauteur minimale de la page à 100% de la hauteur de la vue */
+    display: flex;
+  	min-height: 100vh;
+  	flex-direction: column;
     position: relative; /* permet de positionner les éléments enfants par rapport à ce conteneur */
 }
 
@@ -34,16 +44,9 @@ body::before {
 footer {
   height: 25px;
   background-color: #f2f2f2;
+  margin-top: auto;
 }
 </style>
-		{% endblock %}
-		<title>
-			{% block title %}Golf -
-			{% endblock %}
-		</title>
-	</head>
-
-	<body>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-black">
 			<div class="container-fluid">
 				<a class="navbar-brand text-center" href="{{path('index')}}">
@@ -58,7 +61,11 @@ footer {
 				<div class="collapse navbar-collapse" id="navbarColor01">
 					<ul class="navbar-nav me-auto">
 						<li class="nav-item">
-							<a class="nav-link text-white" href="{{path('proshop')}}">Proshop
+							<a class="nav-link text-white" href="{{path('catalogue')}}">Proshop
+							</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link text-white" href="{{path('test')}}">Test
 							</a>
 						</li>
 						{% if not is_granted('IS_AUTHENTICATED_FULLY') %}
@@ -97,8 +104,8 @@ footer {
 		- Déjà, quand on ne met pas un mail ça met une erreur bizarre, j'aimerai que cette erreur se fasse autrement. Déjà savoir si c'est une erreur du code faite par le développeur ou juste une erreur indiquée pour l'utilisateur
 															
 	À part :
-	  - Remplacer le GIF par webm ça n'accepte pas les fonds transparents les GIF et redimensionner l'image
 	  - Voir concernant le footer pour bien le foutre tout en bas avec masse <div> dans le base html twig
+	  - Le formulaire d'inscription ne marche plus du tout
 -->
 
 		{% block body %}{% endblock %}
