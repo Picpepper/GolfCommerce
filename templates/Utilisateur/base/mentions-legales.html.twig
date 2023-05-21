@@ -1,9 +1,61 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}{{parent()}}Mentions légales{% endblock %}
+{% block title %}
+	{{parent()}}Mentions légales
+{% endblock %}
 
 {% block body %}
-<h1 class="text-center text-primary mt-4 pt-4 display-1 fw-bold"> MENTIONS LEGALES </h1>
-    <h2 class="text-center text-secondary mb-4 pb-4 display-2"> Site en construction </h2>
+	<style>
+		.gradient-text {
+			background-image: linear-gradient(to right, #00bfff, #32cd32);
+			-webkit-background-clip: text;
+			-moz-background-clip: text;
+			background-clip: text;
+			color: transparent;
+		}
+		html,
+		body {
+			background: none;
+			background-color: white;
+		}
+	</style>
+	<h1 class="text-center gradient-text mt-4 pt-4 display-1 fw-bold">
+		MENTIONS LEGALES
+	</h1>
+
+	<nav id="mentions-legales" class="mentions-legales bg-body-tertiary px-3 mb-3">
+		<a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Les parties</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a class="dropdown-item" href="#scrollspyHeading1">Identification du site</a>
+			</li>
+			<li>
+				<a class="dropdown-item" href="#scrollspyHeading2">Propriété intellectuelle</a>
+			</li>
+			<li>
+				<a class="dropdown-item" href="#scrollspyHeading3">Protection des données personnelles</a>
+			</li>
+			<li>
+				<a class="dropdown-item" href="#scrollspyHeading4">Limitation de responsabilité</a>
+			</li>
+		</ul>
+	</nav>
+	<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-root-margin="0px 0px -40%" data-bs-smooth-scroll="true" class="scrollspy-example bg-body-tertiary p-3 rounded-2" tabindex="0">
+		<h2 id="scrollspyHeading1">1. Identification du site</h2>
+		<p>Le présent site est édité par Clément Desjonquères, un étudiant en BTS SIO au Lycée Guy Mollet d'Arras, immatriculé sous le numéro SIRET 19620256800016, dont le siège social est situé au 57 rue Bocquet Flochel 62000 ARRAS.</p>
+		<p>Contact :
+			<a href="mailto:clementdesj@hotmail.fr">clementdesj@hotmail.fr</a>
+		</p>
+
+		<h2 id="scrollspyHeading2">2. Propriété intellectuelle</h2>
+		<p>Tous les éléments présents sur le site, tels que les textes, les images, les logos, les graphiques, les vidéos, sont la propriété exclusive de Google Images ou de ses partenaires et sont protégés par les lois relatives à la propriété intellectuelle. Toute reproduction, distribution, modification ou utilisation de ces éléments sans autorisation préalable écrite est strictement interdite, cela dépendra beaucoup de l'image que vous utilisez.</p>
+
+		<h2 id="scrollspyHeading3">3. Protection des données personnelles</h2>
+		<p>Aucunes données personnelles sur vous sont et seront utilisées à des fins publicitaires ou n'importe quel autre usage. Ce projet est uniquement fait par un étudiant et il n'a aucun droit sur vous.</p>
+
+		<h2 id="scrollspyHeading4">4. Limitation de responsabilité</h2>
+		<p>L'étudiant qui a créé ce projet s'efforce de fournir des informations exactes et à jour sur le site, mais ne peut garantir l'exactitude, l'exhaustivité ou la pertinence des informations fournies. Le Lycée Guy Mollet d'Arras décline toute responsabilité quant à l'utilisation qui pourrait être faite des informations présentes sur le site.</p>
+	</div>
 
 {% endblock %}
+

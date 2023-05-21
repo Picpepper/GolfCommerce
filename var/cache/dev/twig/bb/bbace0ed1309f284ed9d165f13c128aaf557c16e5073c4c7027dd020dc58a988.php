@@ -75,7 +75,7 @@ class __TwigTemplate_3cbc24dc0b0090fbef5efd0cd52bb3f0a8a4d9b31f02c0aa9fadbfd6f55
         echo "
 \t<div class=\"container-fluid\">
 \t<h1 class=\"text-center text-primary mt-4 pt-4 display-1 fw-bold\">
-\t\t\tConnectez-vous</h1>
+\t\t\tCONNECTEZ-VOUS</h1>
 
 
 \t\t<div class=\"row justify-content-center\">
@@ -170,7 +170,7 @@ class __TwigTemplate_3cbc24dc0b0090fbef5efd0cd52bb3f0a8a4d9b31f02c0aa9fadbfd6f55
 
 \t<div class=\"container-fluid\">
 \t<h1 class=\"text-center text-primary mt-4 pt-4 display-1 fw-bold\">
-\t\t\tConnectez-vous</h1>
+\t\t\tCONNECTEZ-VOUS</h1>
 
 
 \t\t<div class=\"row justify-content-center\">

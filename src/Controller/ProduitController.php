@@ -52,7 +52,7 @@ class ProduitController extends AbstractController
     }
 
     #[Route('/proshop', name: 'proshop')]
-    public function index(Request $request): Response
+    public function proshop(Request $request): Response
     {
         $produits = new Produit();
         $form = $this->createForm(ProduitType::class, $produits);
@@ -82,7 +82,7 @@ class ProduitController extends AbstractController
                 return $this->redirectToRoute('test');
             }
         }
-        return $this->render('Admin/produit/ajoutproduit.html.twig', [
+        return $this->render('Admin/produit/proshop.html.twig', [
                 'produits' => $produits,
                 'ajoutproduits' => $form->createView(),
             ]);

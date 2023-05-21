@@ -14,12 +14,17 @@
   color: transparent;
 }
 
-h5{
-	font-family: 'Herbe';
-	src: url('public/templates/Herbe.ttf') format('woff');
-	font-weight : bold;
-	color: #7CFC00;
+@font-face {
+  font-family: 'Herbe';
+  src: url('public/templates/Herbe.ttf') format('truetype');
 }
+
+h5 {
+  font-family: 'Herbe';
+  font-weight: bold;
+  color: #7CFC00;
+}
+
 </style>
 
 	<h1 class="text-center gradient-text mt-4 pt-4 display-1 fw-bold">
@@ -29,24 +34,6 @@ h5{
 	</h3>
 
 	<div class="container">
-		<div class="row mt-3">
-			<h1>
-				Tous les produits
-			</h1>
-			<div class="card col m-1" style="width: 18rem;">
-				<div class="card-body">
-					<div class="d-flex flex-row-reverse">
-						<a href="#" class="btn btn-light m-1">
-							<img src="Img-proshop/favoris.png" title="Le produit n'est pas dans vos favoris" alt="favoris" width="25" height="25">
-						</a>
-						<a href="#" class="btn btn-light m-1">
-							<img src="Img-proshop/panier.png" title="Le produit n'est pas dans votre panier" alt="panier" width="25" height="25">
-						</a>
-					</div>
-				</div>
-			</div>
-		</div>
-
 		<div class="container">
 			<div class="row mt-3">
 				<h1>
@@ -276,11 +263,6 @@ h5{
 								</div>
 							</div>
 						</div>
-				<div class="container">
-					<div class="row mt-3">
-						<h1>
-							Vêtements
-						</h1>
 
 	<div class="container">
 		<div class="row g-3">

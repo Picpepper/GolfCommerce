@@ -60,10 +60,15 @@ footer {
 				</button>
 				<div class="collapse navbar-collapse" id="navbarColor01">
 					<ul class="navbar-nav me-auto">
-						<li class="nav-item">
-							<a class="nav-link text-white" href="{{path('catalogue')}}">Proshop
-							</a>
-						</li>
+								<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle text-white" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Proshop</a>
+								<div class="dropdown-menu">
+									<a class="dropdown-item text-black" href="{{path('catalogue')}}">Catalogue
+									</a>
+									<a class="dropdown-item text-black" href="{{path('proshop')}}">Acheter maintenant
+									</a>
+								</div>
+							</li>
 						<li class="nav-item">
 							<a class="nav-link text-white" href="{{path('test')}}">Test
 							</a>

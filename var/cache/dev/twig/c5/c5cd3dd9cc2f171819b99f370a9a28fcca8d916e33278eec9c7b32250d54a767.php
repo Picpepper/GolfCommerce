@@ -107,35 +107,43 @@ footer {
 \t\t\t\t</button>
 \t\t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
 \t\t\t\t\t<ul class=\"navbar-nav me-auto\">
-\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"";
-        // line 64
+\t\t\t\t\t\t\t\t<li class=\"nav-item dropdown\">
+\t\t\t\t\t\t\t\t<a class=\"nav-link dropdown-toggle text-white\" data-bs-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Proshop</a>
+\t\t\t\t\t\t\t\t<div class=\"dropdown-menu\">
+\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item text-black\" href=\"";
+        // line 66
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("catalogue");
-        echo "\">Proshop
-\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t</li>
+        echo "\">Catalogue
+\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item text-black\" href=\"";
+        // line 68
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("proshop");
+        echo "\">Acheter maintenant
+\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"";
-        // line 68
+        // line 73
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("test");
         echo "\">Test
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t";
-        // line 71
+        // line 76
         if ( !$this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 72
+            // line 77
             echo "\t\t\t\t\t\t<div class=\"d-flex flex-row-reverse\">
 \t\t\t\t\t\t\t<li class=\"nav-item dropdown\">
 \t\t\t\t\t\t\t\t<a class=\"nav-link dropdown-toggle text-white\" data-bs-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Identification</a>
 \t\t\t\t\t\t\t\t<div class=\"dropdown-menu\">
 \t\t\t\t\t\t\t\t\t<a class=\"dropdown-item text-black\" href=\"";
-            // line 76
+            // line 81
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\">Se connecter
 \t\t\t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t\t\t\t<a class=\"dropdown-item text-black\" href=\"";
-            // line 78
+            // line 83
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             echo "\">S'inscrire
 \t\t\t\t\t\t\t\t\t</a>
@@ -143,10 +151,10 @@ footer {
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t";
         } else {
-            // line 83
+            // line 88
             echo "\t\t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"";
-            // line 84
+            // line 89
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\">
 \t\t\t\t\t\t\t\t\t<i class=\"bi bi-x-circle-fill text-white\"></i>
@@ -154,7 +162,7 @@ footer {
 \t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t";
         }
-        // line 89
+        // line 94
         echo "\t\t\t\t\t</ul>
 \t\t\t\t</div>
 \t\t\t</div>
@@ -174,12 +182,13 @@ footer {
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \tÀ part :
 \t  - Voir concernant le footer pour bien le foutre tout en bas avec masse <div> dans le base html twig
+\t  - Le formulaire d'inscription ne marche plus du tout
 -->
 
 \t\t";
-        // line 110
+        // line 116
         $this->displayBlock('body', $context, $blocks);
-        // line 111
+        // line 117
         echo "
 \t\t<footer class=\"navbar navbar-expand-lg navbar-dark bg-black\">
 \t\t\t<div class=\"container-fluid\">
@@ -188,14 +197,14 @@ footer {
 \t\t\t\t\t<ul class=\"navbar-nav justify-content-end\">
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"";
-        // line 118
+        // line 124
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("mentions");
         echo "\">Mentions legales
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"";
-        // line 122
+        // line 128
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("propos");
         echo "\">À propos
 \t\t\t\t\t\t\t</a>
@@ -207,9 +216,9 @@ footer {
 
 
 \t\t";
-        // line 131
+        // line 137
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 134
+        // line 140
         echo "\t</body>
 </html>
 
@@ -250,7 +259,7 @@ footer {
 
     }
 
-    // line 110
+    // line 116
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -262,14 +271,14 @@ footer {
 
     }
 
-    // line 131
+    // line 137
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 132
+        // line 138
         echo "\t\t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ\" crossorigin=\"anonymous\"></script>
 \t\t";
         
@@ -289,7 +298,7 @@ footer {
 
     public function getDebugInfo()
     {
-        return array (  273 => 132,  266 => 131,  254 => 110,  240 => 13,  230 => 8,  223 => 7,  213 => 134,  211 => 131,  199 => 122,  192 => 118,  183 => 111,  181 => 110,  158 => 89,  150 => 84,  147 => 83,  139 => 78,  134 => 76,  128 => 72,  126 => 71,  120 => 68,  113 => 64,  98 => 52,  59 => 15,  57 => 13,  54 => 12,  52 => 7,  44 => 1,);
+        return array (  282 => 138,  275 => 137,  263 => 116,  249 => 13,  239 => 8,  232 => 7,  222 => 140,  220 => 137,  208 => 128,  201 => 124,  192 => 117,  190 => 116,  166 => 94,  158 => 89,  155 => 88,  147 => 83,  142 => 81,  136 => 77,  134 => 76,  128 => 73,  120 => 68,  115 => 66,  98 => 52,  59 => 15,  57 => 13,  54 => 12,  52 => 7,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -356,10 +365,15 @@ footer {
 \t\t\t\t</button>
 \t\t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
 \t\t\t\t\t<ul class=\"navbar-nav me-auto\">
-\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"{{path('catalogue')}}\">Proshop
-\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li class=\"nav-item dropdown\">
+\t\t\t\t\t\t\t\t<a class=\"nav-link dropdown-toggle text-white\" data-bs-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Proshop</a>
+\t\t\t\t\t\t\t\t<div class=\"dropdown-menu\">
+\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item text-black\" href=\"{{path('catalogue')}}\">Catalogue
+\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item text-black\" href=\"{{path('proshop')}}\">Acheter maintenant
+\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"{{path('test')}}\">Test
 \t\t\t\t\t\t\t</a>
@@ -401,6 +415,7 @@ footer {
 \t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
 \tÀ part :
 \t  - Voir concernant le footer pour bien le foutre tout en bas avec masse <div> dans le base html twig
+\t  - Le formulaire d'inscription ne marche plus du tout
 -->
 
 \t\t{% block body %}{% endblock %}

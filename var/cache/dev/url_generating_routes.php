@@ -10,7 +10,7 @@ return [
     'app_favoris' => [[], ['_controller' => 'App\\Controller\\FavorisController::index'], [], [['text', '/favoris']], [], [], []],
     'app_panier' => [[], ['_controller' => 'App\\Controller\\PanierController::index'], [], [['text', '/panier']], [], [], []],
     'ajoutproduit' => [[], ['_controller' => 'App\\Controller\\ProduitController::AjoutProduits'], [], [['text', '/ajoutproduit']], [], [], []],
-    'proshop' => [[], ['_controller' => 'App\\Controller\\ProduitController::index'], [], [['text', '/proshop']], [], [], []],
+    'proshop' => [[], ['_controller' => 'App\\Controller\\ProduitController::proshop'], [], [['text', '/proshop']], [], [], []],
     'app_register' => [[], ['_controller' => 'App\\Controller\\RegistrationController::register'], [], [['text', '/register']], [], [], []],
     'app_verify_email' => [[], ['_controller' => 'App\\Controller\\RegistrationController::verifyUserEmail'], [], [['text', '/verify/email']], [], [], []],
     'app_login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], [], []],

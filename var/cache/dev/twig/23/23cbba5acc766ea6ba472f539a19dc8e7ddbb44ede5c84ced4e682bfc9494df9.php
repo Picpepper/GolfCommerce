@@ -83,12 +83,17 @@ class __TwigTemplate_94673834cf21b577bf0d0c713dc2aa18332918cc7ff483d867c2a8d22c5
   color: transparent;
 }
 
-h5{
-\tfont-family: 'Herbe';
-\tsrc: url('public/templates/Herbe.ttf') format('woff');
-\tfont-weight : bold;
-\tcolor: #7CFC00;
+@font-face {
+  font-family: 'Herbe';
+  src: url('public/templates/Herbe.ttf') format('truetype');
 }
+
+h5 {
+  font-family: 'Herbe';
+  font-weight: bold;
+  color: #7CFC00;
+}
+
 </style>
 
 \t<h1 class=\"text-center gradient-text mt-4 pt-4 display-1 fw-bold\">
@@ -98,24 +103,6 @@ h5{
 \t</h3>
 
 \t<div class=\"container\">
-\t\t<div class=\"row mt-3\">
-\t\t\t<h1>
-\t\t\t\tTous les produits
-\t\t\t</h1>
-\t\t\t<div class=\"card col m-1\" style=\"width: 18rem;\">
-\t\t\t\t<div class=\"card-body\">
-\t\t\t\t\t<div class=\"d-flex flex-row-reverse\">
-\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-light m-1\">
-\t\t\t\t\t\t\t<img src=\"Img-proshop/favoris.png\" title=\"Le produit n'est pas dans vos favoris\" alt=\"favoris\" width=\"25\" height=\"25\">
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-light m-1\">
-\t\t\t\t\t\t\t<img src=\"Img-proshop/panier.png\" title=\"Le produit n'est pas dans votre panier\" alt=\"panier\" width=\"25\" height=\"25\">
-\t\t\t\t\t\t</a>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t</div>
-
 \t\t<div class=\"container\">
 \t\t\t<div class=\"row mt-3\">
 \t\t\t\t<h1>
@@ -345,34 +332,29 @@ h5{
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
-\t\t\t\t<div class=\"container\">
-\t\t\t\t\t<div class=\"row mt-3\">
-\t\t\t\t\t\t<h1>
-\t\t\t\t\t\t\tVêtements
-\t\t\t\t\t\t</h1>
 
 \t<div class=\"container\">
 \t\t<div class=\"row g-3\">
 
     ";
-        // line 288
+        // line 270
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 288, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 270, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
-            // line 289
+            // line 271
             echo "        <div class=\"card\">
             <div class=\"card-header\">";
-            // line 290
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 290), "html", null, true);
+            // line 272
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 272), "html", null, true);
             echo "</div>
             <div class=\"card-body\">
                 <p>";
-            // line 292
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 292), "html", null, true);
+            // line 274
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 274), "html", null, true);
             echo "</p>
                 <p>Prix : ";
-            // line 293
-            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "prix", [], "any", false, false, false, 293), "html", null, true);
+            // line 275
+            echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "prix", [], "any", false, false, false, 275), "html", null, true);
             echo " €</p>
             </div>
         </div>
@@ -381,7 +363,7 @@ h5{
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 297
+        // line 279
         echo "
 \t\t\t</div>
 \t\t</div>
@@ -425,7 +407,7 @@ Concernant les rôles :
 
     public function getDebugInfo()
     {
-        return array (  385 => 297,  375 => 293,  371 => 292,  366 => 290,  363 => 289,  359 => 288,  77 => 8,  70 => 7,  60 => 4,  53 => 3,  36 => 1,);
+        return array (  367 => 279,  357 => 275,  353 => 274,  348 => 272,  345 => 271,  341 => 270,  77 => 8,  70 => 7,  60 => 4,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -446,12 +428,17 @@ Concernant les rôles :
   color: transparent;
 }
 
-h5{
-\tfont-family: 'Herbe';
-\tsrc: url('public/templates/Herbe.ttf') format('woff');
-\tfont-weight : bold;
-\tcolor: #7CFC00;
+@font-face {
+  font-family: 'Herbe';
+  src: url('public/templates/Herbe.ttf') format('truetype');
 }
+
+h5 {
+  font-family: 'Herbe';
+  font-weight: bold;
+  color: #7CFC00;
+}
+
 </style>
 
 \t<h1 class=\"text-center gradient-text mt-4 pt-4 display-1 fw-bold\">
@@ -461,24 +448,6 @@ h5{
 \t</h3>
 
 \t<div class=\"container\">
-\t\t<div class=\"row mt-3\">
-\t\t\t<h1>
-\t\t\t\tTous les produits
-\t\t\t</h1>
-\t\t\t<div class=\"card col m-1\" style=\"width: 18rem;\">
-\t\t\t\t<div class=\"card-body\">
-\t\t\t\t\t<div class=\"d-flex flex-row-reverse\">
-\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-light m-1\">
-\t\t\t\t\t\t\t<img src=\"Img-proshop/favoris.png\" title=\"Le produit n'est pas dans vos favoris\" alt=\"favoris\" width=\"25\" height=\"25\">
-\t\t\t\t\t\t</a>
-\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-light m-1\">
-\t\t\t\t\t\t\t<img src=\"Img-proshop/panier.png\" title=\"Le produit n'est pas dans votre panier\" alt=\"panier\" width=\"25\" height=\"25\">
-\t\t\t\t\t\t</a>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t</div>
-\t\t</div>
-
 \t\t<div class=\"container\">
 \t\t\t<div class=\"row mt-3\">
 \t\t\t\t<h1>
@@ -708,11 +677,6 @@ h5{
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
-\t\t\t\t<div class=\"container\">
-\t\t\t\t\t<div class=\"row mt-3\">
-\t\t\t\t\t\t<h1>
-\t\t\t\t\t\t\tVêtements
-\t\t\t\t\t\t</h1>
 
 \t<div class=\"container\">
 \t\t<div class=\"row g-3\">

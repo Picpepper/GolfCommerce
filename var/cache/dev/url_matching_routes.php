@@ -15,7 +15,7 @@ return [
         '/favoris' => [[['_route' => 'app_favoris', '_controller' => 'App\\Controller\\FavorisController::index'], null, null, null, false, false, null]],
         '/panier' => [[['_route' => 'app_panier', '_controller' => 'App\\Controller\\PanierController::index'], null, null, null, false, false, null]],
         '/ajoutproduit' => [[['_route' => 'ajoutproduit', '_controller' => 'App\\Controller\\ProduitController::AjoutProduits'], null, null, null, false, false, null]],
-        '/proshop' => [[['_route' => 'proshop', '_controller' => 'App\\Controller\\ProduitController::index'], null, null, null, false, false, null]],
+        '/proshop' => [[['_route' => 'proshop', '_controller' => 'App\\Controller\\ProduitController::proshop'], null, null, null, false, false, null]],
         '/register' => [[['_route' => 'app_register', '_controller' => 'App\\Controller\\RegistrationController::register'], null, null, null, false, false, null]],
         '/verify/email' => [[['_route' => 'app_verify_email', '_controller' => 'App\\Controller\\RegistrationController::verifyUserEmail'], null, null, null, false, false, null]],
         '/login' => [[['_route' => 'app_login', '_controller' => 'App\\Controller\\SecurityController::login'], null, null, null, false, false, null]],

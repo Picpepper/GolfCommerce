@@ -88,7 +88,7 @@ class __TwigTemplate_c26b7eee1be844b3e8bd7ae3a0add24359e8f9dacd871d689e79c931194
         echo "
 \t<div class=\"container-fluid\">
 \t\t<h1 class=\"text-center text-primary mt-4 pt-4 display-1 fw-bold\">
-\t\t\tInscrivez-vous</h1>
+\t\t\tINSCRIVEZ-VOUS</h1>
 
 \t\t<div class=\"row justify-content-center\">
 \t\t\t<div class=\"col-12 col-md-6 bg-white p-4 m-0 text-primary\">
@@ -101,7 +101,7 @@ class __TwigTemplate_c26b7eee1be844b3e8bd7ae3a0add24359e8f9dacd871d689e79c931194
 \t\t\t\t<div class=\"checkbox mb-3\">
 \t\t\t\t\t<label>
 \t\t\t\t\t\t<input type=\"checkbox\" name=\"_remember_me\">
-\t\t\t\t\t\tAgree terms
+\t\t\t\t\t\tConfirmer son inscription
 \t\t\t\t\t</label>
 \t\t\t\t</div>
 
@@ -157,7 +157,7 @@ class __TwigTemplate_c26b7eee1be844b3e8bd7ae3a0add24359e8f9dacd871d689e79c931194
 
 \t<div class=\"container-fluid\">
 \t\t<h1 class=\"text-center text-primary mt-4 pt-4 display-1 fw-bold\">
-\t\t\tInscrivez-vous</h1>
+\t\t\tINSCRIVEZ-VOUS</h1>
 
 \t\t<div class=\"row justify-content-center\">
 \t\t\t<div class=\"col-12 col-md-6 bg-white p-4 m-0 text-primary\">
@@ -170,7 +170,7 @@ class __TwigTemplate_c26b7eee1be844b3e8bd7ae3a0add24359e8f9dacd871d689e79c931194
 \t\t\t\t<div class=\"checkbox mb-3\">
 \t\t\t\t\t<label>
 \t\t\t\t\t\t<input type=\"checkbox\" name=\"_remember_me\">
-\t\t\t\t\t\tAgree terms
+\t\t\t\t\t\tConfirmer son inscription
 \t\t\t\t\t</label>
 \t\t\t\t</div>
 
