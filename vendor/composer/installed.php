@@ -5,7 +5,7 @@
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
-        'reference' => '96e27155045efd82896e06d175bbc2429cdc9a4a',
+        'reference' => 'ac00de9a3d259a2fd8039acbb70065626036c2d0',
         'name' => '__root__',
         'dev' => true,
     ),
@@ -16,7 +16,7 @@
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
-            'reference' => '96e27155045efd82896e06d175bbc2429cdc9a4a',
+            'reference' => 'ac00de9a3d259a2fd8039acbb70065626036c2d0',
             'dev_requirement' => false,
         ),
         'doctrine/annotations' => array(
@@ -287,6 +287,15 @@
             'install_path' => __DIR__ . '/../symfony/apache-pack',
             'aliases' => array(),
             'reference' => '3aa5818d73ad2551281fc58a75afd9ca82622e6c',
+            'dev_requirement' => false,
+        ),
+        'symfony/asset' => array(
+            'pretty_version' => 'v5.4.21',
+            'version' => '5.4.21.0',
+            'type' => 'library',
+            'install_path' => __DIR__ . '/../symfony/asset',
+            'aliases' => array(),
+            'reference' => '1504b6773c6b90118f9871e90a67833b5d1dca3c',
             'dev_requirement' => false,
         ),
         'symfony/cache' => array(

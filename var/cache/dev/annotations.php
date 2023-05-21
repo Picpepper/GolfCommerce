@@ -72,6 +72,8 @@ return [[
 '[C]App%5CController%5CBaseController%23mentions' => 1,
 'App%5CController%5CBaseController%23propos' => 0,
 '[C]App%5CController%5CBaseController%23propos' => 1,
+'App%5CController%5CBaseController%23test' => 0,
+'[C]App%5CController%5CBaseController%23test' => 1,
 'App%5CController%5CFavorisController' => 0,
 '[C]App%5CController%5CFavorisController' => 1,
 'App%5CController%5CFavorisController%23index' => 0,
@@ -82,6 +84,8 @@ return [[
 '[C]App%5CController%5CPanierController%23index' => 1,
 'App%5CController%5CProduitController' => 0,
 '[C]App%5CController%5CProduitController' => 1,
+'App%5CController%5CProduitController%23AjoutProduits' => 0,
+'[C]App%5CController%5CProduitController%23AjoutProduits' => 1,
 'App%5CController%5CProduitController%23proshop' => 0,
 '[C]App%5CController%5CProduitController%23proshop' => 1,
 'App%5CController%5CRegistrationController' => 0,
@@ -132,6 +136,10 @@ return [[
 '[C]App%5CEntity%5CProduit%23getImage' => 1,
 'App%5CEntity%5CProduit%23setImage' => 0,
 '[C]App%5CEntity%5CProduit%23setImage' => 1,
+'App%5CEntity%5CProduit%23getCategorie' => 0,
+'[C]App%5CEntity%5CProduit%23getCategorie' => 1,
+'App%5CEntity%5CProduit%23setCategorie' => 0,
+'[C]App%5CEntity%5CProduit%23setCategorie' => 1,
 'App%5CEntity%5CProduit%24id' => 0,
 '[C]App%5CEntity%5CProduit%24id' => 1,
 'App%5CEntity%5CProduit%24nom' => 0,
@@ -142,6 +150,8 @@ return [[
 '[C]App%5CEntity%5CProduit%24prix' => 1,
 'App%5CEntity%5CProduit%24image' => 0,
 '[C]App%5CEntity%5CProduit%24image' => 1,
+'App%5CEntity%5CProduit%24categorie' => 0,
+'[C]App%5CEntity%5CProduit%24categorie' => 1,
 'App%5CEntity%5CUser' => 0,
 '[C]App%5CEntity%5CUser' => 1,
 'App%5CEntity%5CUser%23getId' => 0,
@@ -656,6 +666,6 @@ return [[
 ], [
 
 0 => [],
-1 => 1683891046,
+1 => 1684671490,
 
 ]];
