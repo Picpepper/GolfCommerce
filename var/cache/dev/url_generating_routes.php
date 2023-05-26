@@ -7,7 +7,8 @@ return [
     'mentions' => [[], ['_controller' => 'App\\Controller\\BaseController::mentions'], [], [['text', '/mentions-legales']], [], [], []],
     'propos' => [[], ['_controller' => 'App\\Controller\\BaseController::propos'], [], [['text', '/a-propos']], [], [], []],
     'test' => [[], ['_controller' => 'App\\Controller\\BaseController::test'], [], [['text', '/test']], [], [], []],
-    'app_favoris' => [[], ['_controller' => 'App\\Controller\\FavorisController::index'], [], [['text', '/favoris']], [], [], []],
+    'favoris_ajouter' => [['id'], ['_controller' => 'App\\Controller\\FavorisController::ajouterAuxFavoris'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/favoris/ajouter']], [], [], []],
+    'favoris_supprimer' => [['id'], ['_controller' => 'App\\Controller\\FavorisController::supprimerDesFavoris'], [], [['variable', '/', '[^/]++', 'id', true], ['text', '/favoris/supprimer']], [], [], []],
     'app_panier' => [[], ['_controller' => 'App\\Controller\\PanierController::index'], [], [['text', '/panier']], [], [], []],
     'ajoutproduit' => [[], ['_controller' => 'App\\Controller\\ProduitController::AjoutProduits'], [], [['text', '/ajoutproduit']], [], [], []],
     'proshop' => [[], ['_controller' => 'App\\Controller\\ProduitController::proshop'], [], [['text', '/proshop']], [], [], []],
@@ -17,4 +18,5 @@ return [
     'app_logout' => [[], ['_controller' => 'App\\Controller\\SecurityController::logout'], [], [['text', '/logout']], [], [], []],
     '_preview_error' => [['code', '_format'], ['_controller' => 'error_controller::preview', '_format' => 'html'], ['code' => '\\d+'], [['variable', '.', '[^/]++', '_format', true], ['variable', '/', '\\d+', 'code', true], ['text', '/_error']], [], [], []],
     'index' => [[], ['_controller' => 'App\\Controller\\BaseController::index'], [], [['text', '/']], [], [], []],
+    'login' => [[], ['_controller' => 'App\\Controller\\SecurityController::login'], [], [['text', '/login']], [], [], []],
 ];

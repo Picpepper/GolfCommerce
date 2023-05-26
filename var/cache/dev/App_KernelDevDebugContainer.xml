@@ -2911,9 +2911,9 @@
     </service>
     <service id="security.access_map" class="Symfony\Component\Security\Http\AccessMap">
       <call method="add">
-        <argument type="service" id=".security.request_matcher.6HLLWUU"/>
+        <argument type="service" id=".security.request_matcher.Pn7yvdV"/>
         <argument type="collection">
-          <argument>ROLE_EMPLOYE</argument>
+          <argument>ROLE_USER</argument>
         </argument>
         <argument>null</argument>
       </call>
@@ -3457,8 +3457,8 @@
         <argument key="security.firewall.map.context.main" type="service_closure" id="security.firewall.map.context.main"/>
       </argument>
     </service>
-    <service id=".security.request_matcher.6HLLWUU" class="Symfony\Component\HttpFoundation\RequestMatcher">
-      <argument>^/private</argument>
+    <service id=".security.request_matcher.Pn7yvdV" class="Symfony\Component\HttpFoundation\RequestMatcher">
+      <argument>^/profile</argument>
     </service>
     <service id="security.command.user_password_encoder" class="Symfony\Bundle\SecurityBundle\Command\UserPasswordEncoderCommand">
       <tag name="console.command" command="security:encode-password"/>
@@ -4446,6 +4446,12 @@
         <argument key="loader" type="service_closure" id=".errored..service_locator.KfbR3DY.Symfony\Component\Config\Loader\LoaderInterface"/>
       </argument>
     </service>
+    <service id=".service_locator.ZJzZ1Z2" class="Symfony\Component\DependencyInjection\ServiceLocator">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="produit" type="service_closure" id=".errored..service_locator.ZJzZ1Z2.App\Entity\Produit"/>
+      </argument>
+    </service>
     <service id=".service_locator.6_RE8XY" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
@@ -4478,9 +4484,11 @@
         <argument key="authenticationUtils" type="service_closure" id="security.authentication_utils"/>
       </argument>
     </service>
-    <service id=".service_locator..6wRQno" class="Symfony\Component\DependencyInjection\ServiceLocator">
+    <service id=".service_locator.UFLuQII" class="Symfony\Component\DependencyInjection\ServiceLocator">
       <tag name="container.service_locator"/>
       <argument type="collection">
+        <argument key="App\Controller\FavorisController::ajouterAuxFavoris" type="service_closure" id=".service_locator.ZJzZ1Z2"/>
+        <argument key="App\Controller\FavorisController::supprimerDesFavoris" type="service_closure" id=".service_locator.ZJzZ1Z2"/>
         <argument key="App\Controller\ProduitController::AjoutProduits" type="service_closure" id=".service_locator.6_RE8XY"/>
         <argument key="App\Controller\ProduitController::proshop" type="service_closure" id=".service_locator.SRtF.2R"/>
         <argument key="App\Controller\RegistrationController::register" type="service_closure" id=".service_locator.wOdllM6"/>
@@ -4490,6 +4498,8 @@
         <argument key="App\Kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="kernel::loadRoutes" type="service_closure" id=".service_locator.KfbR3DY"/>
         <argument key="kernel::registerContainerConfiguration" type="service_closure" id=".service_locator.KfbR3DY"/>
+        <argument key="App\Controller\FavorisController:ajouterAuxFavoris" type="service_closure" id=".service_locator.ZJzZ1Z2"/>
+        <argument key="App\Controller\FavorisController:supprimerDesFavoris" type="service_closure" id=".service_locator.ZJzZ1Z2"/>
         <argument key="App\Controller\ProduitController:AjoutProduits" type="service_closure" id=".service_locator.6_RE8XY"/>
         <argument key="App\Controller\ProduitController:proshop" type="service_closure" id=".service_locator.SRtF.2R"/>
         <argument key="App\Controller\RegistrationController:register" type="service_closure" id=".service_locator.wOdllM6"/>
@@ -4809,12 +4819,12 @@
       <argument type="service" id="security.token_storage"/>
     </service>
     <service id="debug.argument_resolver.service.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver">
-      <argument type="service" id=".service_locator..6wRQno"/>
+      <argument type="service" id=".service_locator.UFLuQII"/>
     </service>
     <service id="debug.argument_resolver.default.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver"/>
     <service id="debug.argument_resolver.variadic.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\VariadicValueResolver"/>
     <service id="debug.argument_resolver.not_tagged_controller.inner" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\NotTaggedControllerValueResolver">
-      <argument type="service" id=".service_locator..6wRQno"/>
+      <argument type="service" id=".service_locator.UFLuQII"/>
     </service>
     <service id=".doctrine.orm.default_metadata_driver.inner" class="Doctrine\Persistence\Mapping\Driver\MappingDriverChain">
       <call method="addDriver">
@@ -4823,6 +4833,7 @@
       </call>
     </service>
     <service id=".errored..service_locator.KfbR3DY.Symfony\Component\Config\Loader\LoaderInterface" class="Symfony\Component\Config\Loader\LoaderInterface"/>
+    <service id=".errored..service_locator.ZJzZ1Z2.App\Entity\Produit" class="App\Entity\Produit"/>
     <service id=".console.command.about.lazy" class="Symfony\Component\Console\Command\LazyCommand">
       <argument>about</argument>
       <argument type="collection"/>
@@ -5534,7 +5545,7 @@
     <service id="SymfonyCasts\Bundle\VerifyEmail\VerifyEmailHelperInterface" alias="symfonycasts.verify_email.helper"/>
     <service id="container.env_var_processors_locator" alias=".service_locator.gSv9zYw" public="true"/>
     <service id="twig.loader.filesystem" alias="twig.loader.native_filesystem"/>
-    <service id="argument_resolver.controller_locator" alias=".service_locator..6wRQno"/>
+    <service id="argument_resolver.controller_locator" alias=".service_locator.UFLuQII"/>
     <service id="session" alias=".session.do-not-use" public="true">
       <deprecated package="symfony/framework-bundle" version="5.3">The "%alias_id%" service and "SessionInterface" alias are deprecated, use "$requestStack-&gt;getSession()" instead.</deprecated>
     </service>
@@ -5542,7 +5553,7 @@
     <service id="doctrine.id_generator_locator" alias=".service_locator.KLVvNIq"/>
     <service id="Psr\Log\LoggerInterface" alias="logger"/>
     <service id=".service_locator.0GV1BZZ" alias=".service_locator.gSv9zYw"/>
-    <service id=".service_locator.JTp0H3G" alias=".service_locator..6wRQno"/>
+    <service id=".service_locator.j8ZFFW." alias=".service_locator.UFLuQII"/>
     <service id=".service_locator.wKF4yn1" alias=".service_locator.l6ELYLY"/>
     <service id=".service_locator.5pbd1H3" alias=".service_locator.7nhUIv1"/>
     <service id=".service_locator.4hi2aOY" alias=".service_locator.bBRwv06"/>
@@ -5564,6 +5575,7 @@
     <service id="argument_resolver.not_tagged_controller" alias="debug.argument_resolver.not_tagged_controller"/>
     <service id="doctrine.orm.default_metadata_driver" alias=".doctrine.orm.default_metadata_driver"/>
     <service id=".service_locator.JBAFp66" alias=".service_locator.KfbR3DY"/>
+    <service id=".service_locator.kBtZJDA" alias=".service_locator.ZJzZ1Z2"/>
     <service id=".service_locator.5YL7cUY" alias=".service_locator.6_RE8XY"/>
     <service id=".service_locator.GPhDY4d" alias=".service_locator.SRtF.2R"/>
     <service id=".service_locator.RfK8sxY" alias=".service_locator.wOdllM6"/>

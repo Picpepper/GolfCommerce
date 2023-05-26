@@ -71,10 +71,20 @@ class __TwigTemplate_16259868464c610741a12fc12febb99ee67294cb644a6338951f143d542
 
         // line 6
         echo "
-";
-        // line 7
-        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["ajoutproduit"]) || array_key_exists("ajoutproduit", $context) ? $context["ajoutproduit"] : (function () { throw new RuntimeError('Variable "ajoutproduit" does not exist.', 7, $this->source); })()), 'form');
-        echo "
+<div class=\"d-flex justify-content-center align-items-center\" style=\"height: 100vh;\">
+    <div class=\"card text-center\" style=\"width: 27rem;\">
+        <div class=\"card-header\">
+            Formulaire
+        </div>
+        <div class=\"card-body\">
+            <h5 class=\"card-title\">Ajouter un produit dans le proshop </h5>
+            <p class=\"card-text\">";
+        // line 14
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["ajoutproduit"]) || array_key_exists("ajoutproduit", $context) ? $context["ajoutproduit"] : (function () { throw new RuntimeError('Variable "ajoutproduit" does not exist.', 14, $this->source); })()), 'form');
+        echo "</p>
+        </div>
+    </div>
+</div>
 
 ";
         
@@ -94,7 +104,7 @@ class __TwigTemplate_16259868464c610741a12fc12febb99ee67294cb644a6338951f143d542
 
     public function getDebugInfo()
     {
-        return array (  76 => 7,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
+        return array (  83 => 14,  73 => 6,  66 => 5,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -105,7 +115,17 @@ class __TwigTemplate_16259868464c610741a12fc12febb99ee67294cb644a6338951f143d542
 
 {% block body %}
 
-{{form(ajoutproduit)}}
+<div class=\"d-flex justify-content-center align-items-center\" style=\"height: 100vh;\">
+    <div class=\"card text-center\" style=\"width: 27rem;\">
+        <div class=\"card-header\">
+            Formulaire
+        </div>
+        <div class=\"card-body\">
+            <h5 class=\"card-title\">Ajouter un produit dans le proshop </h5>
+            <p class=\"card-text\">{{ form(ajoutproduit) }}</p>
+        </div>
+    </div>
+</div>
 
 {% endblock %}", "Admin/produit/ajoutproduit.html.twig", "/var/www/html/P_SiteGolf/templates/Admin/produit/ajoutproduit.html.twig");
     }

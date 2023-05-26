@@ -18,22 +18,22 @@
 		}
 	</style>
 	<!--
-										> Faire en sorte que le title du bouton s'affiche au passage de la souris partout sur le button et pas uniquement sur l'image
-										> Mettre les catégories de clubs / vêtements
-										> Créer les articles (card déjà présentes actuellement)
-										> Mettre une option à droite du nom pour afficher TOUS les produits pas en carousel mais format page
-										> Mettre un texte qui s'adapte en fonction de quand c'est en favoris ou pas "Retirer des favoris" "Ajouter aux favoris" lorsque l'on passe la souris
-										> Risque de devoir refaire toutes les images avec le chemin qui commence par "Images/" quand je vais clear le cache.
-										> Faire un système de tri pour trouver des produits
-										> Première page = Catalogue (boutons de visite), ça amène à la page de la catégorie où là tous les produits de la catégorie seront répertoriés (boutons d'info, d'ajout dans le panier et de favoris)
-										
-										Concernant les rôles :
-										> Administrateur (Hauts placés qui peuvent gérer les permissions et donner les rôles aux salariés tout en pouvant personnaliser ses fonctions)
-										> Salarié (Peut gérer les promos, ajouter un produit, retirer un produit grâce à un formulaire)
-										> Utilisateur (Est le client)
-																				
-										> Si on va plus loin, les membres mais dans le cas d'un site hors commerce.
-										-->
+												> Faire en sorte que le title du bouton s'affiche au passage de la souris partout sur le button et pas uniquement sur l'image
+												> Mettre les catégories de clubs / vêtements
+												> Créer les articles (card déjà présentes actuellement)
+												> Mettre une option à droite du nom pour afficher TOUS les produits pas en carousel mais format page
+												> Mettre un texte qui s'adapte en fonction de quand c'est en favoris ou pas "Retirer des favoris" "Ajouter aux favoris" lorsque l'on passe la souris
+												> Risque de devoir refaire toutes les images avec le chemin qui commence par "Images/" quand je vais clear le cache.
+												> Faire un système de tri pour trouver des produits
+												> Première page = Catalogue (boutons de visite), ça amène à la page de la catégorie où là tous les produits de la catégorie seront répertoriés (boutons d'info, d'ajout dans le panier et de favoris)
+												
+												Concernant les rôles :
+												> Administrateur (Hauts placés qui peuvent gérer les permissions et donner les rôles aux salariés tout en pouvant personnaliser ses fonctions)
+												> Salarié (Peut gérer les promos, ajouter un produit, retirer un produit grâce à un formulaire)
+												> Utilisateur (Est le client)
+																						
+												> Si on va plus loin, les membres mais dans le cas d'un site hors commerce.
+												-->
 	<h1 class="text-center mt-4 pt-4 display-1 fw-bold">
 		PROSHOP</h1>
 	<h3 class="text-center mb-4 pb-4 display-2">
@@ -45,6 +45,9 @@
 			<div class="row mt-3">
 				<h1>
 					Clubs de golf
+					{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_EMPLOYE')%}
+						<a class="nav-link text-white" href="{{path('ajoutproduit')}}">+</a>
+					{% endif %}
 				</h1>
 			</div>
 		</div>
@@ -62,11 +65,11 @@
 									<p class="card-text">Prix :
 										{{ produit.prix }}
 										€</p>
-							<div class="d-flex justify-content-between">
-								<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/info.png" alt="Info" width="25"></a>
-								<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/favoris.png" alt="Favoris" width="25"></a>
-								<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/panier.png" alt="Panier" width="25"></a>
-							</div>
+									<div class="d-flex justify-content-between">
+										<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/info.png" alt="Info" width="25"></a>
+										<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/favoris.png" alt="Favoris" width="25"></a>
+										<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/panier.png" alt="Panier" width="25"></a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -80,6 +83,9 @@
 			<div class="row mt-3">
 				<h1>
 					Tenues vestimentaires
+					{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_EMPLOYE')%}
+						<a class="nav-link text-white" href="{{path('ajoutproduit')}}">+</a>
+					{% endif %}
 				</h1>
 			</div>
 		</div>
@@ -98,11 +104,11 @@
 									<p class="card-text">Prix :
 										{{ produit.prix }}
 										€</p>
-							<div class="d-flex justify-content-between">
-								<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/info.png" alt="Info" width="25"></a>
-								<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/favoris.png" alt="Favoris" width="25"></a>
-								<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/panier.png" alt="Panier" width="25"></a>
-							</div>
+									<div class="d-flex justify-content-between">
+										<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/info.png" alt="Info" width="25"></a>
+										<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/favoris.png" alt="Favoris" width="25"></a>
+										<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/panier.png" alt="Panier" width="25"></a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -115,10 +121,12 @@
 			<div class="row mt-3">
 				<h1>
 					Accessoires
+					{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_EMPLOYE')%}
+						<a class="nav-link text-white" href="{{path('ajoutproduit')}}">+</a>
+					{% endif %}
 				</h1>
 			</div>
 		</div>
-
 
 		<div class="container">
 			<div class="row">
@@ -133,11 +141,11 @@
 									<p class="card-text">Prix :
 										{{ produit.prix }}
 										€</p>
-							<div class="d-flex justify-content-between">
-								<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/info.png" alt="Info" width="25"></a>
-								<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/favoris.png" alt="Favoris" width="25"></a>
-								<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/panier.png" alt="Panier" width="25"></a>
-							</div>
+									<div class="d-flex justify-content-between">
+										<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/info.png" alt="Info" width="25"></a>
+										<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/favoris.png" alt="Favoris" width="25"></a>
+										<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/panier.png" alt="Panier" width="25"></a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -150,6 +158,9 @@
 			<div class="row mt-3">
 				<h1>
 					Chariots de golf
+					{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_EMPLOYE')%}
+						<a class="nav-link text-white" href="{{path('ajoutproduit')}}">+</a>
+					{% endif %}
 				</h1>
 			</div>
 		</div>
@@ -168,11 +179,11 @@
 									<p class="card-text">Prix :
 										{{ produit.prix }}
 										€</p>
-							<div class="d-flex justify-content-between">
-								<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/info.png" alt="Info" width="25"></a>
-								<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/favoris.png" alt="Favoris" width="25"></a>
-								<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/panier.png" alt="Panier" width="25"></a>
-							</div>
+									<div class="d-flex justify-content-between">
+										<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/info.png" alt="Info" width="25"></a>
+										<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/favoris.png" alt="Favoris" width="25"></a>
+										<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/panier.png" alt="Panier" width="25"></a>
+									</div>
 								</div>
 							</div>
 						</div>
@@ -185,60 +196,32 @@
 			<div class="row mt-3">
 				<h1>
 					Sacs de golf
+					{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_EMPLOYE')%}
+						<a class="nav-link text-white" href="{{path('ajoutproduit')}}">+</a>
+					{% endif %}
 				</h1>
 			</div>
 		</div>
 
 
-<div class="container">
-	<div class="row row-cols-4">
 		{% for produit in produits %}
 			{% if produit.categorie == "sac" %}
-				<div class="col">
-					<div class="card mb-4" style="width: 18rem;">
-						<img src="{{ asset('Images/' ~ produit.image) }}" class="card-img-top" alt="{{ produit.nom }}">
-						<div class="card-body">
-							<h5 class="card-title">{{ produit.nom }}</h5>
-							<p class="card-text">{{ produit.description }}</p>
-							<p class="card-text">Prix : {{ produit.prix }} €</p>
-							<div class="d-flex justify-content-between">
-								<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/info.png" alt="Info" width="25"></a>
-								<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/favoris.png" alt="Favoris" width="25"></a>
-								<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/panier.png" alt="Panier" width="25"></a>
-							</div>
-						</div>
-					</div>
-				</div>
-			{% endif %}
-		{% endfor %}
-	</div>
-</div>
-
-
-		<div class="container">
-			<div class="row mt-3">
-				<h1>
-					Balles de golf
-				</h1>
-			</div>
-		</div>
-
-
-
-<div class="container">
-	<div class="row">
-		{% for produit in produits %}
-			{% if produit.categorie == "balle" %}
 				<div class="col-md-4">
 					<div class="card mb-4" style="width: 18rem;">
 						<img src="{{ asset('Images/' ~ produit.image) }}" class="card-img-top" alt="{{ produit.nom }}">
 						<div class="card-body">
 							<h5 class="card-title">{{ produit.nom }}</h5>
 							<p class="card-text">{{ produit.description }}</p>
-							<p class="card-text">Prix : {{ produit.prix }} €</p>
+							<p class="card-text">Prix :
+								{{ produit.prix }}
+								€</p>
 							<div class="d-flex justify-content-between">
 								<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/info.png" alt="Info" width="25"></a>
-								<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/favoris.png" alt="Favoris" width="25"></a>
+								{% if app.user and produit in app.user.getFavoris() %}
+									<a href="{{ path('favoris_supprimer', {id: produit.id}) }}" class="btn btn-success"><img src="Images/Img-proshop/favoris.png" alt="Favoris" width="25"></a>
+								{% else %}
+									<a href="{{ path('favoris_ajouter', {id: produit.id}) }}" class="btn btn-outline-secondary"><img src="Images/Img-proshop/favoris.png" alt="Favoris" width="25"></a>
+								{% endif %}
 								<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/panier.png" alt="Panier" width="25"></a>
 							</div>
 						</div>
@@ -246,8 +229,46 @@
 				</div>
 			{% endif %}
 		{% endfor %}
+
+
+		<div class="container">
+			<div class="row mt-3">
+				<h1>
+					Balles de golf
+
+					{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_EMPLOYE')%}
+						<a class="nav-link text-white" href="{{path('ajoutproduit')}}">+</a>
+					{% endif %}
+				</h1>
+			</div>
+		</div>
+
+		<div class="container">
+			<div class="row">
+				{% for produit in produits %}
+					{% if produit.categorie == "balle" %}
+						<div class="col-md-4">
+							<div class="card mb-4" style="width: 18rem;">
+								<img src="{{ asset('Images/' ~ produit.image) }}" class="card-img-top" alt="{{ produit.nom }}">
+								<div class="card-body">
+									<h5 class="card-title">{{ produit.nom }}</h5>
+									<p class="card-text">{{ produit.description }}</p>
+									<p class="card-text">Prix :
+										{{ produit.prix }}
+										€</p>
+									<div class="d-flex justify-content-between">
+										<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/info.png" alt="Info" width="25"></a>
+										<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/favoris.png" alt="Favoris" width="25"></a>
+										<a href="#" class="btn btn-outline-secondary"><img src="Images/Img-proshop/panier.png" alt="Panier" width="25"></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					{% endif %}
+				{% endfor %}
+			</div>
+		</div>
 	</div>
-</div></div>
 
 {% endblock %}
 

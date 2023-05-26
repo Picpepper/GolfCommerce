@@ -4,6 +4,16 @@
 
 {% block body %}
 
-{{form(ajoutproduit)}}
+<div class="d-flex justify-content-center align-items-center" style="height: 100vh;">
+    <div class="card text-center" style="width: 27rem;">
+        <div class="card-header">
+            Formulaire
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">Ajouter un produit dans le proshop </h5>
+            <p class="card-text">{{ form(ajoutproduit) }}</p>
+        </div>
+    </div>
+</div>
 
 {% endblock %}

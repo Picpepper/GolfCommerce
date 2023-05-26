@@ -78,72 +78,68 @@ class __TwigTemplate_ec1d7c1a5d5e2fdf26edccc1537a1682154a69578e1c484a5bcd19cee0b
 \t\t\t\t</button>
 \t\t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
 \t\t\t\t\t<ul class=\"navbar-nav\">
-<li class=\"nav-item dropdown\">
-\t<a class=\"nav-link dropdown-toggle text-white\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">Proshop</a>
-\t<ul class=\"dropdown-menu\">
-\t\t<li><a class=\"dropdown-item\" href=\"";
-        // line 76
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("catalogue");
-        echo "\">Catalogue</a></li>
-\t\t<li><a class=\"dropdown-item\" href=\"";
+\t\t\t\t\t\t<li class=\"nav-item dropdown\">
+\t\t\t\t\t\t\t<a class=\"nav-link dropdown-toggle text-white\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">Proshop</a>
+\t\t\t\t\t\t\t<ul class=\"dropdown-menu\">
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"";
         // line 77
+        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("catalogue");
+        echo "\">Catalogue</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"";
+        // line 80
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("proshop");
-        echo "\">Acheter maintenant</a></li>
-\t</ul>
-</li>
-
-
-
-\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"";
-        // line 84
-        echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("test");
-        echo "\">Test</a>
+        echo "\">Acheter maintenant</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t</li>
-\t\t\t\t\t</ul>
-\t\t\t\t\t";
-        // line 87
+
+\t\t\t\t\t\t";
+        // line 85
         if ( !$this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("IS_AUTHENTICATED_FULLY")) {
-            // line 88
-            echo "\t\t\t\t\t\t<ul class=\"navbar-nav ms-auto\">
-\t\t\t\t\t\t\t<li class=\"nav-item dropdown\">
-\t\t\t\t\t\t\t\t<a class=\"nav-link dropdown-toggle text-white\" data-bs-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Identification</a>
-\t\t\t\t\t\t\t\t<div class=\"dropdown-menu dropdown-menu-end\">
-\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item text-black\" href=\"";
-            // line 92
+            // line 86
+            echo "\t\t\t\t\t\t\t<ul class=\"navbar-nav ms-auto\">
+\t\t\t\t\t\t\t\t<li class=\"nav-item dropdown\">
+\t\t\t\t\t\t\t\t\t<a class=\"nav-link dropdown-toggle text-white\" data-bs-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Identification</a>
+\t\t\t\t\t\t\t\t\t<div class=\"dropdown-menu dropdown-menu-end\">
+\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item text-black\" href=\"";
+            // line 90
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_login");
             echo "\">Se connecter</a>
-\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item text-black\" href=\"";
-            // line 93
+\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item text-black\" href=\"";
+            // line 91
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_register");
             echo "\">S'inscrire</a>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t";
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t";
         } else {
+            // line 96
+            echo "\t\t\t\t\t\t\t<ul class=\"navbar-nav ms-auto\">
+\t\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"";
             // line 98
-            echo "\t\t\t\t\t\t<ul class=\"navbar-nav ms-auto\">
-\t\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"";
-            // line 100
             echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("app_logout");
             echo "\">
-\t\t\t\t\t\t\t\t\t<i class=\"bi bi-x-circle-fill text-white\"></i>
-\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t";
+\t\t\t\t\t\t\t\t\t\t<i class=\"bi bi-x-circle-fill text-white\"></i>
+\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t";
         }
-        // line 106
-        echo "\t\t\t\t</div>
+        // line 104
+        echo "\t\t\t\t\t</ul>
+\t\t\t\t</div>
 \t\t\t</div>
 \t\t</nav>
 
 \t\t";
-        // line 110
+        // line 109
         $this->displayBlock('body', $context, $blocks);
-        // line 111
+        // line 110
         echo "
 \t\t<footer class=\"navbar navbar-expand-lg navbar-dark bg-black\">
 \t\t\t<div class=\"container-fluid\">
@@ -152,14 +148,14 @@ class __TwigTemplate_ec1d7c1a5d5e2fdf26edccc1537a1682154a69578e1c484a5bcd19cee0b
 \t\t\t\t\t<ul class=\"navbar-nav justify-content-end\">
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"";
-        // line 118
+        // line 117
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("mentions");
         echo "\">Mentions legales
 \t\t\t\t\t\t\t</a>
 \t\t\t\t\t\t</li>
 \t\t\t\t\t\t<li class=\"nav-item\">
 \t\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"";
-        // line 122
+        // line 121
         echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("propos");
         echo "\">À propos
 \t\t\t\t\t\t\t</a>
@@ -171,11 +167,12 @@ class __TwigTemplate_ec1d7c1a5d5e2fdf26edccc1537a1682154a69578e1c484a5bcd19cee0b
 
 
 \t\t";
-        // line 131
+        // line 130
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 134
+        // line 133
         echo "\t</body>
-</html>
+</html></body></html>
+
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -191,7 +188,7 @@ class __TwigTemplate_ec1d7c1a5d5e2fdf26edccc1537a1682154a69578e1c484a5bcd19cee0b
 
         // line 8
         echo "\t\t\t<!-- Bootstrap CSS -->
-<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ\" crossorigin=\"anonymous\">
+\t\t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ\" crossorigin=\"anonymous\">
 \t\t\t<style>
 \t\t\t\th1,
 \t\t\t\th3 {
@@ -252,7 +249,7 @@ class __TwigTemplate_ec1d7c1a5d5e2fdf26edccc1537a1682154a69578e1c484a5bcd19cee0b
 
     }
 
-    // line 110
+    // line 109
     public function block_body($context, array $blocks = [])
     {
         $macros = $this->macros;
@@ -264,15 +261,15 @@ class __TwigTemplate_ec1d7c1a5d5e2fdf26edccc1537a1682154a69578e1c484a5bcd19cee0b
 
     }
 
-    // line 131
+    // line 130
     public function block_javascripts($context, array $blocks = [])
     {
         $macros = $this->macros;
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02 = $this->extensions["Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension"];
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->enter($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof = new \Twig\Profiler\Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 132
-        echo "<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe\" crossorigin=\"anonymous\"></script>
+        // line 131
+        echo "\t\t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe\" crossorigin=\"anonymous\"></script>
 \t\t";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -291,7 +288,7 @@ class __TwigTemplate_ec1d7c1a5d5e2fdf26edccc1537a1682154a69578e1c484a5bcd19cee0b
 
     public function getDebugInfo()
     {
-        return array (  275 => 132,  268 => 131,  256 => 110,  242 => 52,  193 => 8,  186 => 7,  177 => 134,  175 => 131,  163 => 122,  156 => 118,  147 => 111,  145 => 110,  139 => 106,  130 => 100,  126 => 98,  118 => 93,  114 => 92,  108 => 88,  106 => 87,  100 => 84,  90 => 77,  86 => 76,  69 => 62,  59 => 54,  57 => 52,  54 => 51,  52 => 7,  44 => 1,);
+        return array (  272 => 131,  265 => 130,  253 => 109,  239 => 52,  190 => 8,  183 => 7,  173 => 133,  171 => 130,  159 => 121,  152 => 117,  143 => 110,  141 => 109,  134 => 104,  125 => 98,  121 => 96,  113 => 91,  109 => 90,  103 => 86,  101 => 85,  93 => 80,  87 => 77,  69 => 62,  59 => 54,  57 => 52,  54 => 51,  52 => 7,  44 => 1,);
     }
 
     public function getSourceContext()
@@ -304,7 +301,7 @@ class __TwigTemplate_ec1d7c1a5d5e2fdf26edccc1537a1682154a69578e1c484a5bcd19cee0b
 \t\t<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
 \t\t{% block stylesheets %}
 \t\t\t<!-- Bootstrap CSS -->
-<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ\" crossorigin=\"anonymous\">
+\t\t\t<link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css\" rel=\"stylesheet\" integrity=\"sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ\" crossorigin=\"anonymous\">
 \t\t\t<style>
 \t\t\t\th1,
 \t\t\t\th3 {
@@ -368,39 +365,38 @@ class __TwigTemplate_ec1d7c1a5d5e2fdf26edccc1537a1682154a69578e1c484a5bcd19cee0b
 \t\t\t\t</button>
 \t\t\t\t<div class=\"collapse navbar-collapse\" id=\"navbarColor01\">
 \t\t\t\t\t<ul class=\"navbar-nav\">
-<li class=\"nav-item dropdown\">
-\t<a class=\"nav-link dropdown-toggle text-white\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">Proshop</a>
-\t<ul class=\"dropdown-menu\">
-\t\t<li><a class=\"dropdown-item\" href=\"{{ path('catalogue') }}\">Catalogue</a></li>
-\t\t<li><a class=\"dropdown-item\" href=\"{{ path('proshop') }}\">Acheter maintenant</a></li>
-\t</ul>
-</li>
-
-
-
-\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"{{path('test')}}\">Test</a>
+\t\t\t\t\t\t<li class=\"nav-item dropdown\">
+\t\t\t\t\t\t\t<a class=\"nav-link dropdown-toggle text-white\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">Proshop</a>
+\t\t\t\t\t\t\t<ul class=\"dropdown-menu\">
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"{{ path('catalogue') }}\">Catalogue</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t\t<li>
+\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item\" href=\"{{ path('proshop') }}\">Acheter maintenant</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t</ul>
 \t\t\t\t\t\t</li>
+
+\t\t\t\t\t\t{% if not is_granted('IS_AUTHENTICATED_FULLY') %}
+\t\t\t\t\t\t\t<ul class=\"navbar-nav ms-auto\">
+\t\t\t\t\t\t\t\t<li class=\"nav-item dropdown\">
+\t\t\t\t\t\t\t\t\t<a class=\"nav-link dropdown-toggle text-white\" data-bs-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Identification</a>
+\t\t\t\t\t\t\t\t\t<div class=\"dropdown-menu dropdown-menu-end\">
+\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item text-black\" href=\"{{path('app_login')}}\">Se connecter</a>
+\t\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item text-black\" href=\"{{path('app_register')}}\">S'inscrire</a>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t{% else %}
+\t\t\t\t\t\t\t<ul class=\"navbar-nav ms-auto\">
+\t\t\t\t\t\t\t\t<li class=\"nav-item\">
+\t\t\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"{{path('app_logout')}}\">
+\t\t\t\t\t\t\t\t\t\t<i class=\"bi bi-x-circle-fill text-white\"></i>
+\t\t\t\t\t\t\t\t\t</a>
+\t\t\t\t\t\t\t\t</li>
+\t\t\t\t\t\t\t</ul>
+\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t</ul>
-\t\t\t\t\t{% if not is_granted('IS_AUTHENTICATED_FULLY') %}
-\t\t\t\t\t\t<ul class=\"navbar-nav ms-auto\">
-\t\t\t\t\t\t\t<li class=\"nav-item dropdown\">
-\t\t\t\t\t\t\t\t<a class=\"nav-link dropdown-toggle text-white\" data-bs-toggle=\"dropdown\" href=\"#\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Identification</a>
-\t\t\t\t\t\t\t\t<div class=\"dropdown-menu dropdown-menu-end\">
-\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item text-black\" href=\"{{path('app_login')}}\">Se connecter</a>
-\t\t\t\t\t\t\t\t\t<a class=\"dropdown-item text-black\" href=\"{{path('app_register')}}\">S'inscrire</a>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t{% else %}
-\t\t\t\t\t\t<ul class=\"navbar-nav ms-auto\">
-\t\t\t\t\t\t\t<li class=\"nav-item\">
-\t\t\t\t\t\t\t\t<a class=\"nav-link\" href=\"{{path('app_logout')}}\">
-\t\t\t\t\t\t\t\t\t<i class=\"bi bi-x-circle-fill text-white\"></i>
-\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t</ul>
-\t\t\t\t\t{% endif %}
 \t\t\t\t</div>
 \t\t\t</div>
 \t\t</nav>
@@ -427,10 +423,11 @@ class __TwigTemplate_ec1d7c1a5d5e2fdf26edccc1537a1682154a69578e1c484a5bcd19cee0b
 
 
 \t\t{% block javascripts %}
-<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe\" crossorigin=\"anonymous\"></script>
+\t\t\t<script src=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js\" integrity=\"sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe\" crossorigin=\"anonymous\"></script>
 \t\t{% endblock %}
 \t</body>
-</html>
+</html></body></html>
+
 ", "base.html.twig", "/var/www/html/P_SiteGolf/templates/base.html.twig");
     }
 }

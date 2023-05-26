@@ -93,35 +93,63 @@ class __TwigTemplate_179385d82dcfc8b21421ac32b363073e92cddf2131b765531103ce0d9db
 \t\t<div class=\"row justify-content-center\">
 \t\t\t<div class=\"col-12 col-md-6 bg-white p-4 m-0 text-primary\">
 
-\t\t\t\t<label for=\"inputEmail\" class=\"fw-bold\">Email</label>
-\t\t\t\t<input type=\"email\" name=\"email\" id=\"inputEmail\" class=\"form-control\" autocomplete=\"email\" required autofocus>
-\t\t\t\t<label for=\"inputPassword\" class=\"fw-bold\">Mot de passe</label>
-\t\t\t\t<input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
+    ";
+        // line 18
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable(twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 18, $this->source); })()), "flashes", [0 => "verify_email_error"], "method", false, false, false, 18));
+        foreach ($context['_seq'] as $context["_key"] => $context["flashError"]) {
+            // line 19
+            echo "        <div class=\"alert alert-danger\" role=\"alert\">";
+            echo twig_escape_filter($this->env, $context["flashError"], "html", null, true);
+            echo "</div>
+    ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['flashError'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 21
+        echo "
+\t";
+        // line 22
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 22, $this->source); })()), 'form_start');
+        echo "
+\t";
+        // line 23
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 23, $this->source); })()), "email", [], "any", false, false, false, 23), 'row');
+        echo "
+\t\t\t\t\t        ";
+        // line 24
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 24, $this->source); })()), "plainPassword", [], "any", false, false, false, 24), 'row', ["label" => "Password"]);
+        // line 26
+        echo "
+\t\t\t\t\t
+\t\t\t\t\t
+    
+        
 
-\t\t\t\t<div class=\"checkbox mb-3\">
-\t\t\t\t\t<label>
-\t\t\t\t\t\t<input type=\"checkbox\" name=\"_remember_me\">
-\t\t\t\t\t\tConfirmer son inscription
-\t\t\t\t\t</label>
-\t\t\t\t</div>
+        ";
+        // line 32
+        echo $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->searchAndRenderBlock(twig_get_attribute($this->env, $this->source, (isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 32, $this->source); })()), "agreeTerms", [], "any", false, false, false, 32), 'row');
+        echo "
 
-\t\t\t\t<div class=\"text-center\">
+                    <div class=\"text-center\">
 \t\t\t\t\t<button class=\"btn bg-primary text-white m-4\" type=\"submit\">
 \t\t\t\t\t\tS'INSCRIRE
 \t\t\t\t\t</button>
-\t\t\t\t</div>
+                    </div>
+    ";
+        // line 39
+        echo         $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderBlock((isset($context["registrationForm"]) || array_key_exists("registrationForm", $context) ? $context["registrationForm"] : (function () { throw new RuntimeError('Variable "registrationForm" does not exist.', 39, $this->source); })()), 'form_end');
+        echo "
 \t\t\t</div>
 \t\t</div>
 \t</div>
 \t<input
 \ttype=\"hidden\" name=\"_csrf_token\" value=\"";
-        // line 39
+        // line 44
         echo twig_escape_filter($this->env, $this->env->getRuntime('Symfony\Component\Form\FormRenderer')->renderCsrfToken("authenticate"), "html", null, true);
         echo "\">
 
-";
-        // line 51
-        echo "
 ";
         
         $__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02->leave($__internal_319393461309892924ff6e74d6d6e64287df64b63545b994e100d4ab223aed02_prof);
@@ -140,7 +168,7 @@ class __TwigTemplate_179385d82dcfc8b21421ac32b363073e92cddf2131b765531103ce0d9db
 
     public function getDebugInfo()
     {
-        return array (  124 => 51,  119 => 39,  88 => 10,  79 => 8,  74 => 7,  67 => 6,  53 => 3,  36 => 1,);
+        return array (  150 => 44,  142 => 39,  132 => 32,  124 => 26,  122 => 24,  118 => 23,  114 => 22,  111 => 21,  102 => 19,  98 => 18,  88 => 10,  79 => 8,  74 => 7,  67 => 6,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -162,39 +190,33 @@ class __TwigTemplate_179385d82dcfc8b21421ac32b363073e92cddf2131b765531103ce0d9db
 \t\t<div class=\"row justify-content-center\">
 \t\t\t<div class=\"col-12 col-md-6 bg-white p-4 m-0 text-primary\">
 
-\t\t\t\t<label for=\"inputEmail\" class=\"fw-bold\">Email</label>
-\t\t\t\t<input type=\"email\" name=\"email\" id=\"inputEmail\" class=\"form-control\" autocomplete=\"email\" required autofocus>
-\t\t\t\t<label for=\"inputPassword\" class=\"fw-bold\">Mot de passe</label>
-\t\t\t\t<input type=\"password\" name=\"password\" id=\"inputPassword\" class=\"form-control\" autocomplete=\"current-password\" required>
+    {% for flashError in app.flashes('verify_email_error') %}
+        <div class=\"alert alert-danger\" role=\"alert\">{{ flashError }}</div>
+    {% endfor %}
 
-\t\t\t\t<div class=\"checkbox mb-3\">
-\t\t\t\t\t<label>
-\t\t\t\t\t\t<input type=\"checkbox\" name=\"_remember_me\">
-\t\t\t\t\t\tConfirmer son inscription
-\t\t\t\t\t</label>
-\t\t\t\t</div>
+\t{{ form_start(registrationForm) }}
+\t{{ form_row(registrationForm.email) }}
+\t\t\t\t\t        {{ form_row(registrationForm.plainPassword, {
+            label: 'Password'
+        }) }}
+\t\t\t\t\t
+\t\t\t\t\t
+    
+        
 
-\t\t\t\t<div class=\"text-center\">
+        {{ form_row(registrationForm.agreeTerms) }}
+
+                    <div class=\"text-center\">
 \t\t\t\t\t<button class=\"btn bg-primary text-white m-4\" type=\"submit\">
 \t\t\t\t\t\tS'INSCRIRE
 \t\t\t\t\t</button>
-\t\t\t\t</div>
+                    </div>
+    {{ form_end(registrationForm) }}
 \t\t\t</div>
 \t\t</div>
 \t</div>
 \t<input
 \ttype=\"hidden\" name=\"_csrf_token\" value=\"{{ csrf_token('authenticate') }}\">
-
-{#
-\t\t\t\t\t\t\t\t\t\t        Uncomment this section and add a remember_me option below your firewall to activate remember me functionality.
-\t\t\t\t\t\t\t\t\t\t        See https://symfony.com/doc/current/security/remember_me.html
-\t\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t\t        <div class=\"checkbox mb-3\">
-\t\t\t\t\t\t\t\t\t\t            <label>
-\t\t\t\t\t\t\t\t\t\t                <input type=\"checkbox\" name=\"_remember_me\"> Remember me
-\t\t\t\t\t\t\t\t\t\t            </label>
-\t\t\t\t\t\t\t\t\t\t        </div>
-\t\t\t\t\t\t\t\t\t\t    #}
 
 {% endblock %}
 

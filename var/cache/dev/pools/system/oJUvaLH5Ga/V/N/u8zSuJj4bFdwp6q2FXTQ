@@ -1,0 +1,3 @@
+<?php //App%255CController%255CFavorisController%2523supprimerDesFavoris
+
+return [PHP_INT_MAX, []];

@@ -87,22 +87,22 @@ class __TwigTemplate_e10901351ff46a138c02684641c13f4763ec767ac77b142ad9d22878efa
 \t\t}
 \t</style>
 \t<!--
-\t\t\t\t\t\t\t\t\t\t> Faire en sorte que le title du bouton s'affiche au passage de la souris partout sur le button et pas uniquement sur l'image
-\t\t\t\t\t\t\t\t\t\t> Mettre les catégories de clubs / vêtements
-\t\t\t\t\t\t\t\t\t\t> Créer les articles (card déjà présentes actuellement)
-\t\t\t\t\t\t\t\t\t\t> Mettre une option à droite du nom pour afficher TOUS les produits pas en carousel mais format page
-\t\t\t\t\t\t\t\t\t\t> Mettre un texte qui s'adapte en fonction de quand c'est en favoris ou pas \"Retirer des favoris\" \"Ajouter aux favoris\" lorsque l'on passe la souris
-\t\t\t\t\t\t\t\t\t\t> Risque de devoir refaire toutes les images avec le chemin qui commence par \"Images/\" quand je vais clear le cache.
-\t\t\t\t\t\t\t\t\t\t> Faire un système de tri pour trouver des produits
-\t\t\t\t\t\t\t\t\t\t> Première page = Catalogue (boutons de visite), ça amène à la page de la catégorie où là tous les produits de la catégorie seront répertoriés (boutons d'info, d'ajout dans le panier et de favoris)
-\t\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t\tConcernant les rôles :
-\t\t\t\t\t\t\t\t\t\t> Administrateur (Hauts placés qui peuvent gérer les permissions et donner les rôles aux salariés tout en pouvant personnaliser ses fonctions)
-\t\t\t\t\t\t\t\t\t\t> Salarié (Peut gérer les promos, ajouter un produit, retirer un produit grâce à un formulaire)
-\t\t\t\t\t\t\t\t\t\t> Utilisateur (Est le client)
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t\t> Si on va plus loin, les membres mais dans le cas d'un site hors commerce.
-\t\t\t\t\t\t\t\t\t\t-->
+\t\t\t\t\t\t\t\t\t\t\t\t> Faire en sorte que le title du bouton s'affiche au passage de la souris partout sur le button et pas uniquement sur l'image
+\t\t\t\t\t\t\t\t\t\t\t\t> Mettre les catégories de clubs / vêtements
+\t\t\t\t\t\t\t\t\t\t\t\t> Créer les articles (card déjà présentes actuellement)
+\t\t\t\t\t\t\t\t\t\t\t\t> Mettre une option à droite du nom pour afficher TOUS les produits pas en carousel mais format page
+\t\t\t\t\t\t\t\t\t\t\t\t> Mettre un texte qui s'adapte en fonction de quand c'est en favoris ou pas \"Retirer des favoris\" \"Ajouter aux favoris\" lorsque l'on passe la souris
+\t\t\t\t\t\t\t\t\t\t\t\t> Risque de devoir refaire toutes les images avec le chemin qui commence par \"Images/\" quand je vais clear le cache.
+\t\t\t\t\t\t\t\t\t\t\t\t> Faire un système de tri pour trouver des produits
+\t\t\t\t\t\t\t\t\t\t\t\t> Première page = Catalogue (boutons de visite), ça amène à la page de la catégorie où là tous les produits de la catégorie seront répertoriés (boutons d'info, d'ajout dans le panier et de favoris)
+\t\t\t\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t\t\t\t\tConcernant les rôles :
+\t\t\t\t\t\t\t\t\t\t\t\t> Administrateur (Hauts placés qui peuvent gérer les permissions et donner les rôles aux salariés tout en pouvant personnaliser ses fonctions)
+\t\t\t\t\t\t\t\t\t\t\t\t> Salarié (Peut gérer les promos, ajouter un produit, retirer un produit grâce à un formulaire)
+\t\t\t\t\t\t\t\t\t\t\t\t> Utilisateur (Est le client)
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t\t\t\t\t> Si on va plus loin, les membres mais dans le cas d'un site hors commerce.
+\t\t\t\t\t\t\t\t\t\t\t\t-->
 \t<h1 class=\"text-center mt-4 pt-4 display-1 fw-bold\">
 \t\tPROSHOP</h1>
 \t<h3 class=\"text-center mb-4 pb-4 display-2\">
@@ -114,61 +114,71 @@ class __TwigTemplate_e10901351ff46a138c02684641c13f4763ec767ac77b142ad9d22878efa
 \t\t\t<div class=\"row mt-3\">
 \t\t\t\t<h1>
 \t\t\t\t\tClubs de golf
-\t\t\t\t</h1>
+\t\t\t\t\t";
+        // line 48
+        if (($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN") || $this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_EMPLOYE"))) {
+            // line 49
+            echo "\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ajoutproduit");
+            echo "\">+</a>
+\t\t\t\t\t";
+        }
+        // line 51
+        echo "\t\t\t\t</h1>
 \t\t\t</div>
 \t\t</div>
 
 \t\t<div class=\"container\">
 \t\t\t<div class=\"row\">
 \t\t\t\t";
-        // line 54
+        // line 57
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 54, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 57, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
-            // line 55
+            // line 58
             echo "\t\t\t\t\t";
-            if ((twig_get_attribute($this->env, $this->source, $context["produit"], "categorie", [], "any", false, false, false, 55) == "club_golf")) {
-                // line 56
+            if ((twig_get_attribute($this->env, $this->source, $context["produit"], "categorie", [], "any", false, false, false, 58) == "club_golf")) {
+                // line 59
                 echo "\t\t\t\t\t\t<div class=\"col-md-4\">
 \t\t\t\t\t\t\t<div class=\"card\" style=\"width: 18rem;\">
 \t\t\t\t\t\t\t\t<img src=\"";
-                // line 58
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("Images/" . twig_get_attribute($this->env, $this->source, $context["produit"], "image", [], "any", false, false, false, 58))), "html", null, true);
+                // line 61
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("Images/" . twig_get_attribute($this->env, $this->source, $context["produit"], "image", [], "any", false, false, false, 61))), "html", null, true);
                 echo "\" class=\"card-img-top\" alt=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 58), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 61), "html", null, true);
                 echo "\">
 \t\t\t\t\t\t\t\t<div class=\"card-body\">
 \t\t\t\t\t\t\t\t\t<h5 class=\"card-title\">";
-                // line 60
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 60), "html", null, true);
+                // line 63
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 63), "html", null, true);
                 echo "</h5>
 \t\t\t\t\t\t\t\t\t<p class=\"card-text\">";
-                // line 61
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 61), "html", null, true);
+                // line 64
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 64), "html", null, true);
                 echo "</p>
 \t\t\t\t\t\t\t\t\t<p class=\"card-text\">Prix :
 \t\t\t\t\t\t\t\t\t\t";
-                // line 63
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "prix", [], "any", false, false, false, 63), "html", null, true);
+                // line 66
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "prix", [], "any", false, false, false, 66), "html", null, true);
                 echo "
 \t\t\t\t\t\t\t\t\t\t€</p>
-\t\t\t\t\t\t\t<div class=\"d-flex justify-content-between\">
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/info.png\" alt=\"Info\" width=\"25\"></a>
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/panier.png\" alt=\"Panier\" width=\"25\"></a>
-\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t<div class=\"d-flex justify-content-between\">
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/info.png\" alt=\"Info\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/panier.png\" alt=\"Panier\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t";
             }
-            // line 74
+            // line 77
             echo "\t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 75
+        // line 78
         echo "\t\t\t</div>
 \t\t</div>
 
@@ -177,7 +187,17 @@ class __TwigTemplate_e10901351ff46a138c02684641c13f4763ec767ac77b142ad9d22878efa
 \t\t\t<div class=\"row mt-3\">
 \t\t\t\t<h1>
 \t\t\t\t\tTenues vestimentaires
-\t\t\t\t</h1>
+\t\t\t\t\t";
+        // line 86
+        if (($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN") || $this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_EMPLOYE"))) {
+            // line 87
+            echo "\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ajoutproduit");
+            echo "\">+</a>
+\t\t\t\t\t";
+        }
+        // line 89
+        echo "\t\t\t\t</h1>
 \t\t\t</div>
 \t\t</div>
 
@@ -185,54 +205,54 @@ class __TwigTemplate_e10901351ff46a138c02684641c13f4763ec767ac77b142ad9d22878efa
 \t\t<div class=\"container\">
 \t\t\t<div class=\"row\">
 \t\t\t\t";
-        // line 90
+        // line 96
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 90, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 96, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
-            // line 91
+            // line 97
             echo "\t\t\t\t\t";
-            if ((twig_get_attribute($this->env, $this->source, $context["produit"], "categorie", [], "any", false, false, false, 91) == "tenue_vestimentaire")) {
-                // line 92
+            if ((twig_get_attribute($this->env, $this->source, $context["produit"], "categorie", [], "any", false, false, false, 97) == "tenue_vestimentaire")) {
+                // line 98
                 echo "\t\t\t\t\t\t<div class=\"col-md-4\">
 \t\t\t\t\t\t\t<div class=\"card\" style=\"width: 18rem;\">
 \t\t\t\t\t\t\t\t<img src=\"";
-                // line 94
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("Images/" . twig_get_attribute($this->env, $this->source, $context["produit"], "image", [], "any", false, false, false, 94))), "html", null, true);
+                // line 100
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("Images/" . twig_get_attribute($this->env, $this->source, $context["produit"], "image", [], "any", false, false, false, 100))), "html", null, true);
                 echo "\" class=\"card-img-top\" alt=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 94), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 100), "html", null, true);
                 echo "\">
 \t\t\t\t\t\t\t\t<div class=\"card-body\">
 \t\t\t\t\t\t\t\t\t<h5 class=\"card-title\">";
-                // line 96
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 96), "html", null, true);
+                // line 102
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 102), "html", null, true);
                 echo "</h5>
 \t\t\t\t\t\t\t\t\t<p class=\"card-text\">";
-                // line 97
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 97), "html", null, true);
+                // line 103
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 103), "html", null, true);
                 echo "</p>
 \t\t\t\t\t\t\t\t\t<p class=\"card-text\">Prix :
 \t\t\t\t\t\t\t\t\t\t";
-                // line 99
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "prix", [], "any", false, false, false, 99), "html", null, true);
+                // line 105
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "prix", [], "any", false, false, false, 105), "html", null, true);
                 echo "
 \t\t\t\t\t\t\t\t\t\t€</p>
-\t\t\t\t\t\t\t<div class=\"d-flex justify-content-between\">
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/info.png\" alt=\"Info\" width=\"25\"></a>
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/panier.png\" alt=\"Panier\" width=\"25\"></a>
-\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t<div class=\"d-flex justify-content-between\">
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/info.png\" alt=\"Info\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/panier.png\" alt=\"Panier\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t";
             }
-            // line 110
+            // line 116
             echo "\t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 111
+        // line 117
         echo "\t\t\t</div>
 \t\t</div>
 
@@ -240,62 +260,71 @@ class __TwigTemplate_e10901351ff46a138c02684641c13f4763ec767ac77b142ad9d22878efa
 \t\t\t<div class=\"row mt-3\">
 \t\t\t\t<h1>
 \t\t\t\t\tAccessoires
-\t\t\t\t</h1>
+\t\t\t\t\t";
+        // line 124
+        if (($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN") || $this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_EMPLOYE"))) {
+            // line 125
+            echo "\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ajoutproduit");
+            echo "\">+</a>
+\t\t\t\t\t";
+        }
+        // line 127
+        echo "\t\t\t\t</h1>
 \t\t\t</div>
 \t\t</div>
-
 
 \t\t<div class=\"container\">
 \t\t\t<div class=\"row\">
 \t\t\t\t";
-        // line 125
+        // line 133
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 125, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 133, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
-            // line 126
+            // line 134
             echo "\t\t\t\t\t";
-            if ((twig_get_attribute($this->env, $this->source, $context["produit"], "categorie", [], "any", false, false, false, 126) == "accessoire")) {
-                // line 127
+            if ((twig_get_attribute($this->env, $this->source, $context["produit"], "categorie", [], "any", false, false, false, 134) == "accessoire")) {
+                // line 135
                 echo "\t\t\t\t\t\t<div class=\"col-md-4\">
 \t\t\t\t\t\t\t<div class=\"card\" style=\"width: 18rem;\">
 \t\t\t\t\t\t\t\t<img src=\"";
-                // line 129
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("Images/" . twig_get_attribute($this->env, $this->source, $context["produit"], "image", [], "any", false, false, false, 129))), "html", null, true);
+                // line 137
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("Images/" . twig_get_attribute($this->env, $this->source, $context["produit"], "image", [], "any", false, false, false, 137))), "html", null, true);
                 echo "\" class=\"card-img-top\" alt=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 129), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 137), "html", null, true);
                 echo "\">
 \t\t\t\t\t\t\t\t<div class=\"card-body\">
 \t\t\t\t\t\t\t\t\t<h5 class=\"card-title\">";
-                // line 131
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 131), "html", null, true);
+                // line 139
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 139), "html", null, true);
                 echo "</h5>
 \t\t\t\t\t\t\t\t\t<p class=\"card-text\">";
-                // line 132
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 132), "html", null, true);
+                // line 140
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 140), "html", null, true);
                 echo "</p>
 \t\t\t\t\t\t\t\t\t<p class=\"card-text\">Prix :
 \t\t\t\t\t\t\t\t\t\t";
-                // line 134
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "prix", [], "any", false, false, false, 134), "html", null, true);
+                // line 142
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "prix", [], "any", false, false, false, 142), "html", null, true);
                 echo "
 \t\t\t\t\t\t\t\t\t\t€</p>
-\t\t\t\t\t\t\t<div class=\"d-flex justify-content-between\">
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/info.png\" alt=\"Info\" width=\"25\"></a>
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/panier.png\" alt=\"Panier\" width=\"25\"></a>
-\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t<div class=\"d-flex justify-content-between\">
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/info.png\" alt=\"Info\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/panier.png\" alt=\"Panier\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t";
             }
-            // line 145
+            // line 153
             echo "\t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 146
+        // line 154
         echo "\t\t\t</div>
 \t\t</div>
 
@@ -303,7 +332,17 @@ class __TwigTemplate_e10901351ff46a138c02684641c13f4763ec767ac77b142ad9d22878efa
 \t\t\t<div class=\"row mt-3\">
 \t\t\t\t<h1>
 \t\t\t\t\tChariots de golf
-\t\t\t\t</h1>
+\t\t\t\t\t";
+        // line 161
+        if (($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN") || $this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_EMPLOYE"))) {
+            // line 162
+            echo "\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ajoutproduit");
+            echo "\">+</a>
+\t\t\t\t\t";
+        }
+        // line 164
+        echo "\t\t\t\t</h1>
 \t\t\t</div>
 \t\t</div>
 
@@ -311,54 +350,54 @@ class __TwigTemplate_e10901351ff46a138c02684641c13f4763ec767ac77b142ad9d22878efa
 \t\t<div class=\"container\">
 \t\t\t<div class=\"row\">
 \t\t\t\t";
-        // line 160
+        // line 171
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 160, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 171, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
-            // line 161
+            // line 172
             echo "\t\t\t\t\t";
-            if ((twig_get_attribute($this->env, $this->source, $context["produit"], "categorie", [], "any", false, false, false, 161) == "chariot")) {
-                // line 162
+            if ((twig_get_attribute($this->env, $this->source, $context["produit"], "categorie", [], "any", false, false, false, 172) == "chariot")) {
+                // line 173
                 echo "\t\t\t\t\t\t<div class=\"col-md-4\">
 \t\t\t\t\t\t\t<div class=\"card\" style=\"width: 18rem;\">
 \t\t\t\t\t\t\t\t<img src=\"";
-                // line 164
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("Images/" . twig_get_attribute($this->env, $this->source, $context["produit"], "image", [], "any", false, false, false, 164))), "html", null, true);
+                // line 175
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("Images/" . twig_get_attribute($this->env, $this->source, $context["produit"], "image", [], "any", false, false, false, 175))), "html", null, true);
                 echo "\" class=\"card-img-top\" alt=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 164), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 175), "html", null, true);
                 echo "\">
 \t\t\t\t\t\t\t\t<div class=\"card-body\">
 \t\t\t\t\t\t\t\t\t<h5 class=\"card-title\">";
-                // line 166
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 166), "html", null, true);
+                // line 177
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 177), "html", null, true);
                 echo "</h5>
 \t\t\t\t\t\t\t\t\t<p class=\"card-text\">";
-                // line 167
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 167), "html", null, true);
+                // line 178
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 178), "html", null, true);
                 echo "</p>
 \t\t\t\t\t\t\t\t\t<p class=\"card-text\">Prix :
 \t\t\t\t\t\t\t\t\t\t";
-                // line 169
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "prix", [], "any", false, false, false, 169), "html", null, true);
+                // line 180
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "prix", [], "any", false, false, false, 180), "html", null, true);
                 echo "
 \t\t\t\t\t\t\t\t\t\t€</p>
-\t\t\t\t\t\t\t<div class=\"d-flex justify-content-between\">
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/info.png\" alt=\"Info\" width=\"25\"></a>
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/panier.png\" alt=\"Panier\" width=\"25\"></a>
-\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t<div class=\"d-flex justify-content-between\">
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/info.png\" alt=\"Info\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/panier.png\" alt=\"Panier\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t";
             }
-            // line 180
+            // line 191
             echo "\t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 181
+        // line 192
         echo "\t\t\t</div>
 \t\t</div>
 
@@ -366,125 +405,160 @@ class __TwigTemplate_e10901351ff46a138c02684641c13f4763ec767ac77b142ad9d22878efa
 \t\t\t<div class=\"row mt-3\">
 \t\t\t\t<h1>
 \t\t\t\t\tSacs de golf
-\t\t\t\t</h1>
+\t\t\t\t\t";
+        // line 199
+        if (($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN") || $this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_EMPLOYE"))) {
+            // line 200
+            echo "\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ajoutproduit");
+            echo "\">+</a>
+\t\t\t\t\t";
+        }
+        // line 202
+        echo "\t\t\t\t</h1>
 \t\t\t</div>
 \t\t</div>
 
 
-<div class=\"container\">
-\t<div class=\"row row-cols-4\">
 \t\t";
-        // line 195
+        // line 207
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 195, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 207, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
-            // line 196
+            // line 208
             echo "\t\t\t";
-            if ((twig_get_attribute($this->env, $this->source, $context["produit"], "categorie", [], "any", false, false, false, 196) == "sac")) {
-                // line 197
-                echo "\t\t\t\t<div class=\"col\">
+            if ((twig_get_attribute($this->env, $this->source, $context["produit"], "categorie", [], "any", false, false, false, 208) == "sac")) {
+                // line 209
+                echo "\t\t\t\t<div class=\"col-md-4\">
 \t\t\t\t\t<div class=\"card mb-4\" style=\"width: 18rem;\">
 \t\t\t\t\t\t<img src=\"";
-                // line 199
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("Images/" . twig_get_attribute($this->env, $this->source, $context["produit"], "image", [], "any", false, false, false, 199))), "html", null, true);
+                // line 211
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("Images/" . twig_get_attribute($this->env, $this->source, $context["produit"], "image", [], "any", false, false, false, 211))), "html", null, true);
                 echo "\" class=\"card-img-top\" alt=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 199), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 211), "html", null, true);
                 echo "\">
 \t\t\t\t\t\t<div class=\"card-body\">
 \t\t\t\t\t\t\t<h5 class=\"card-title\">";
-                // line 201
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 201), "html", null, true);
+                // line 213
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 213), "html", null, true);
                 echo "</h5>
 \t\t\t\t\t\t\t<p class=\"card-text\">";
-                // line 202
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 202), "html", null, true);
+                // line 214
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 214), "html", null, true);
                 echo "</p>
-\t\t\t\t\t\t\t<p class=\"card-text\">Prix : ";
-                // line 203
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "prix", [], "any", false, false, false, 203), "html", null, true);
-                echo " €</p>
+\t\t\t\t\t\t\t<p class=\"card-text\">Prix :
+\t\t\t\t\t\t\t\t";
+                // line 216
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "prix", [], "any", false, false, false, 216), "html", null, true);
+                echo "
+\t\t\t\t\t\t\t\t€</p>
 \t\t\t\t\t\t\t<div class=\"d-flex justify-content-between\">
 \t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/info.png\" alt=\"Info\" width=\"25\"></a>
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/panier.png\" alt=\"Panier\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t";
+                // line 220
+                if ((twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 220, $this->source); })()), "user", [], "any", false, false, false, 220) && twig_in_filter($context["produit"], twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, (isset($context["app"]) || array_key_exists("app", $context) ? $context["app"] : (function () { throw new RuntimeError('Variable "app" does not exist.', 220, $this->source); })()), "user", [], "any", false, false, false, 220), "getFavoris", [], "method", false, false, false, 220)))) {
+                    // line 221
+                    echo "\t\t\t\t\t\t\t\t\t<a href=\"";
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("favoris_supprimer", ["id" => twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 221)]), "html", null, true);
+                    echo "\" class=\"btn btn-success\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t";
+                } else {
+                    // line 223
+                    echo "\t\t\t\t\t\t\t\t\t<a href=\"";
+                    echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("favoris_ajouter", ["id" => twig_get_attribute($this->env, $this->source, $context["produit"], "id", [], "any", false, false, false, 223)]), "html", null, true);
+                    echo "\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t";
+                }
+                // line 225
+                echo "\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/panier.png\" alt=\"Panier\" width=\"25\"></a>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
 \t\t\t\t\t</div>
 \t\t\t\t</div>
 \t\t\t";
             }
-            // line 213
+            // line 231
             echo "\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 214
-        echo "\t</div>
-</div>
-
+        // line 232
+        echo "
 
 \t\t<div class=\"container\">
 \t\t\t<div class=\"row mt-3\">
 \t\t\t\t<h1>
 \t\t\t\t\tBalles de golf
-\t\t\t\t</h1>
+
+\t\t\t\t\t";
+        // line 239
+        if (($this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_ADMIN") || $this->extensions['Symfony\Bridge\Twig\Extension\SecurityExtension']->isGranted("ROLE_EMPLOYE"))) {
+            // line 240
+            echo "\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"";
+            echo $this->extensions['Symfony\Bridge\Twig\Extension\RoutingExtension']->getPath("ajoutproduit");
+            echo "\">+</a>
+\t\t\t\t\t";
+        }
+        // line 242
+        echo "\t\t\t\t</h1>
 \t\t\t</div>
 \t\t</div>
 
-
-
-<div class=\"container\">
-\t<div class=\"row\">
-\t\t";
-        // line 230
+\t\t<div class=\"container\">
+\t\t\t<div class=\"row\">
+\t\t\t\t";
+        // line 248
         $context['_parent'] = $context;
-        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 230, $this->source); })()));
+        $context['_seq'] = twig_ensure_traversable((isset($context["produits"]) || array_key_exists("produits", $context) ? $context["produits"] : (function () { throw new RuntimeError('Variable "produits" does not exist.', 248, $this->source); })()));
         foreach ($context['_seq'] as $context["_key"] => $context["produit"]) {
-            // line 231
-            echo "\t\t\t";
-            if ((twig_get_attribute($this->env, $this->source, $context["produit"], "categorie", [], "any", false, false, false, 231) == "balle")) {
-                // line 232
-                echo "\t\t\t\t<div class=\"col-md-4\">
-\t\t\t\t\t<div class=\"card mb-4\" style=\"width: 18rem;\">
-\t\t\t\t\t\t<img src=\"";
-                // line 234
-                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("Images/" . twig_get_attribute($this->env, $this->source, $context["produit"], "image", [], "any", false, false, false, 234))), "html", null, true);
+            // line 249
+            echo "\t\t\t\t\t";
+            if ((twig_get_attribute($this->env, $this->source, $context["produit"], "categorie", [], "any", false, false, false, 249) == "balle")) {
+                // line 250
+                echo "\t\t\t\t\t\t<div class=\"col-md-4\">
+\t\t\t\t\t\t\t<div class=\"card mb-4\" style=\"width: 18rem;\">
+\t\t\t\t\t\t\t\t<img src=\"";
+                // line 252
+                echo twig_escape_filter($this->env, $this->extensions['Symfony\Bridge\Twig\Extension\AssetExtension']->getAssetUrl(("Images/" . twig_get_attribute($this->env, $this->source, $context["produit"], "image", [], "any", false, false, false, 252))), "html", null, true);
                 echo "\" class=\"card-img-top\" alt=\"";
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 234), "html", null, true);
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 252), "html", null, true);
                 echo "\">
-\t\t\t\t\t\t<div class=\"card-body\">
-\t\t\t\t\t\t\t<h5 class=\"card-title\">";
-                // line 236
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 236), "html", null, true);
+\t\t\t\t\t\t\t\t<div class=\"card-body\">
+\t\t\t\t\t\t\t\t\t<h5 class=\"card-title\">";
+                // line 254
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "nom", [], "any", false, false, false, 254), "html", null, true);
                 echo "</h5>
-\t\t\t\t\t\t\t<p class=\"card-text\">";
-                // line 237
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 237), "html", null, true);
+\t\t\t\t\t\t\t\t\t<p class=\"card-text\">";
+                // line 255
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "description", [], "any", false, false, false, 255), "html", null, true);
                 echo "</p>
-\t\t\t\t\t\t\t<p class=\"card-text\">Prix : ";
-                // line 238
-                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "prix", [], "any", false, false, false, 238), "html", null, true);
-                echo " €</p>
-\t\t\t\t\t\t\t<div class=\"d-flex justify-content-between\">
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/info.png\" alt=\"Info\" width=\"25\"></a>
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/panier.png\" alt=\"Panier\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t<p class=\"card-text\">Prix :
+\t\t\t\t\t\t\t\t\t\t";
+                // line 257
+                echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->source, $context["produit"], "prix", [], "any", false, false, false, 257), "html", null, true);
+                echo "
+\t\t\t\t\t\t\t\t\t\t€</p>
+\t\t\t\t\t\t\t\t\t<div class=\"d-flex justify-content-between\">
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/info.png\" alt=\"Info\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/panier.png\" alt=\"Panier\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t";
+\t\t\t\t\t";
             }
-            // line 248
-            echo "\t\t";
+            // line 268
+            echo "\t\t\t\t";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['produit'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 249
-        echo "\t</div>
-</div></div>
+        // line 269
+        echo "\t\t\t</div>
+\t\t</div>
+\t</div>
 
 ";
         
@@ -504,7 +578,7 @@ class __TwigTemplate_e10901351ff46a138c02684641c13f4763ec767ac77b142ad9d22878efa
 
     public function getDebugInfo()
     {
-        return array (  486 => 249,  480 => 248,  467 => 238,  463 => 237,  459 => 236,  452 => 234,  448 => 232,  445 => 231,  441 => 230,  423 => 214,  417 => 213,  404 => 203,  400 => 202,  396 => 201,  389 => 199,  385 => 197,  382 => 196,  378 => 195,  362 => 181,  356 => 180,  342 => 169,  337 => 167,  333 => 166,  326 => 164,  322 => 162,  319 => 161,  315 => 160,  299 => 146,  293 => 145,  279 => 134,  274 => 132,  270 => 131,  263 => 129,  259 => 127,  256 => 126,  252 => 125,  236 => 111,  230 => 110,  216 => 99,  211 => 97,  207 => 96,  200 => 94,  196 => 92,  193 => 91,  189 => 90,  172 => 75,  166 => 74,  152 => 63,  147 => 61,  143 => 60,  136 => 58,  132 => 56,  129 => 55,  125 => 54,  77 => 8,  70 => 7,  60 => 4,  53 => 3,  36 => 1,);
+        return array (  559 => 269,  553 => 268,  539 => 257,  534 => 255,  530 => 254,  523 => 252,  519 => 250,  516 => 249,  512 => 248,  504 => 242,  498 => 240,  496 => 239,  487 => 232,  481 => 231,  473 => 225,  467 => 223,  461 => 221,  459 => 220,  452 => 216,  447 => 214,  443 => 213,  436 => 211,  432 => 209,  429 => 208,  425 => 207,  418 => 202,  412 => 200,  410 => 199,  401 => 192,  395 => 191,  381 => 180,  376 => 178,  372 => 177,  365 => 175,  361 => 173,  358 => 172,  354 => 171,  345 => 164,  339 => 162,  337 => 161,  328 => 154,  322 => 153,  308 => 142,  303 => 140,  299 => 139,  292 => 137,  288 => 135,  285 => 134,  281 => 133,  273 => 127,  267 => 125,  265 => 124,  256 => 117,  250 => 116,  236 => 105,  231 => 103,  227 => 102,  220 => 100,  216 => 98,  213 => 97,  209 => 96,  200 => 89,  194 => 87,  192 => 86,  182 => 78,  176 => 77,  162 => 66,  157 => 64,  153 => 63,  146 => 61,  142 => 59,  139 => 58,  135 => 57,  127 => 51,  121 => 49,  119 => 48,  77 => 8,  70 => 7,  60 => 4,  53 => 3,  36 => 1,);
     }
 
     public function getSourceContext()
@@ -529,22 +603,22 @@ class __TwigTemplate_e10901351ff46a138c02684641c13f4763ec767ac77b142ad9d22878efa
 \t\t}
 \t</style>
 \t<!--
-\t\t\t\t\t\t\t\t\t\t> Faire en sorte que le title du bouton s'affiche au passage de la souris partout sur le button et pas uniquement sur l'image
-\t\t\t\t\t\t\t\t\t\t> Mettre les catégories de clubs / vêtements
-\t\t\t\t\t\t\t\t\t\t> Créer les articles (card déjà présentes actuellement)
-\t\t\t\t\t\t\t\t\t\t> Mettre une option à droite du nom pour afficher TOUS les produits pas en carousel mais format page
-\t\t\t\t\t\t\t\t\t\t> Mettre un texte qui s'adapte en fonction de quand c'est en favoris ou pas \"Retirer des favoris\" \"Ajouter aux favoris\" lorsque l'on passe la souris
-\t\t\t\t\t\t\t\t\t\t> Risque de devoir refaire toutes les images avec le chemin qui commence par \"Images/\" quand je vais clear le cache.
-\t\t\t\t\t\t\t\t\t\t> Faire un système de tri pour trouver des produits
-\t\t\t\t\t\t\t\t\t\t> Première page = Catalogue (boutons de visite), ça amène à la page de la catégorie où là tous les produits de la catégorie seront répertoriés (boutons d'info, d'ajout dans le panier et de favoris)
-\t\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t\tConcernant les rôles :
-\t\t\t\t\t\t\t\t\t\t> Administrateur (Hauts placés qui peuvent gérer les permissions et donner les rôles aux salariés tout en pouvant personnaliser ses fonctions)
-\t\t\t\t\t\t\t\t\t\t> Salarié (Peut gérer les promos, ajouter un produit, retirer un produit grâce à un formulaire)
-\t\t\t\t\t\t\t\t\t\t> Utilisateur (Est le client)
-\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
-\t\t\t\t\t\t\t\t\t\t> Si on va plus loin, les membres mais dans le cas d'un site hors commerce.
-\t\t\t\t\t\t\t\t\t\t-->
+\t\t\t\t\t\t\t\t\t\t\t\t> Faire en sorte que le title du bouton s'affiche au passage de la souris partout sur le button et pas uniquement sur l'image
+\t\t\t\t\t\t\t\t\t\t\t\t> Mettre les catégories de clubs / vêtements
+\t\t\t\t\t\t\t\t\t\t\t\t> Créer les articles (card déjà présentes actuellement)
+\t\t\t\t\t\t\t\t\t\t\t\t> Mettre une option à droite du nom pour afficher TOUS les produits pas en carousel mais format page
+\t\t\t\t\t\t\t\t\t\t\t\t> Mettre un texte qui s'adapte en fonction de quand c'est en favoris ou pas \"Retirer des favoris\" \"Ajouter aux favoris\" lorsque l'on passe la souris
+\t\t\t\t\t\t\t\t\t\t\t\t> Risque de devoir refaire toutes les images avec le chemin qui commence par \"Images/\" quand je vais clear le cache.
+\t\t\t\t\t\t\t\t\t\t\t\t> Faire un système de tri pour trouver des produits
+\t\t\t\t\t\t\t\t\t\t\t\t> Première page = Catalogue (boutons de visite), ça amène à la page de la catégorie où là tous les produits de la catégorie seront répertoriés (boutons d'info, d'ajout dans le panier et de favoris)
+\t\t\t\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t\t\t\t\tConcernant les rôles :
+\t\t\t\t\t\t\t\t\t\t\t\t> Administrateur (Hauts placés qui peuvent gérer les permissions et donner les rôles aux salariés tout en pouvant personnaliser ses fonctions)
+\t\t\t\t\t\t\t\t\t\t\t\t> Salarié (Peut gérer les promos, ajouter un produit, retirer un produit grâce à un formulaire)
+\t\t\t\t\t\t\t\t\t\t\t\t> Utilisateur (Est le client)
+\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t\t
+\t\t\t\t\t\t\t\t\t\t\t\t> Si on va plus loin, les membres mais dans le cas d'un site hors commerce.
+\t\t\t\t\t\t\t\t\t\t\t\t-->
 \t<h1 class=\"text-center mt-4 pt-4 display-1 fw-bold\">
 \t\tPROSHOP</h1>
 \t<h3 class=\"text-center mb-4 pb-4 display-2\">
@@ -556,6 +630,9 @@ class __TwigTemplate_e10901351ff46a138c02684641c13f4763ec767ac77b142ad9d22878efa
 \t\t\t<div class=\"row mt-3\">
 \t\t\t\t<h1>
 \t\t\t\t\tClubs de golf
+\t\t\t\t\t{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_EMPLOYE')%}
+\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"{{path('ajoutproduit')}}\">+</a>
+\t\t\t\t\t{% endif %}
 \t\t\t\t</h1>
 \t\t\t</div>
 \t\t</div>
@@ -573,11 +650,11 @@ class __TwigTemplate_e10901351ff46a138c02684641c13f4763ec767ac77b142ad9d22878efa
 \t\t\t\t\t\t\t\t\t<p class=\"card-text\">Prix :
 \t\t\t\t\t\t\t\t\t\t{{ produit.prix }}
 \t\t\t\t\t\t\t\t\t\t€</p>
-\t\t\t\t\t\t\t<div class=\"d-flex justify-content-between\">
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/info.png\" alt=\"Info\" width=\"25\"></a>
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/panier.png\" alt=\"Panier\" width=\"25\"></a>
-\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t<div class=\"d-flex justify-content-between\">
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/info.png\" alt=\"Info\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/panier.png\" alt=\"Panier\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
@@ -591,6 +668,9 @@ class __TwigTemplate_e10901351ff46a138c02684641c13f4763ec767ac77b142ad9d22878efa
 \t\t\t<div class=\"row mt-3\">
 \t\t\t\t<h1>
 \t\t\t\t\tTenues vestimentaires
+\t\t\t\t\t{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_EMPLOYE')%}
+\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"{{path('ajoutproduit')}}\">+</a>
+\t\t\t\t\t{% endif %}
 \t\t\t\t</h1>
 \t\t\t</div>
 \t\t</div>
@@ -609,11 +689,11 @@ class __TwigTemplate_e10901351ff46a138c02684641c13f4763ec767ac77b142ad9d22878efa
 \t\t\t\t\t\t\t\t\t<p class=\"card-text\">Prix :
 \t\t\t\t\t\t\t\t\t\t{{ produit.prix }}
 \t\t\t\t\t\t\t\t\t\t€</p>
-\t\t\t\t\t\t\t<div class=\"d-flex justify-content-between\">
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/info.png\" alt=\"Info\" width=\"25\"></a>
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/panier.png\" alt=\"Panier\" width=\"25\"></a>
-\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t<div class=\"d-flex justify-content-between\">
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/info.png\" alt=\"Info\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/panier.png\" alt=\"Panier\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
@@ -626,10 +706,12 @@ class __TwigTemplate_e10901351ff46a138c02684641c13f4763ec767ac77b142ad9d22878efa
 \t\t\t<div class=\"row mt-3\">
 \t\t\t\t<h1>
 \t\t\t\t\tAccessoires
+\t\t\t\t\t{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_EMPLOYE')%}
+\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"{{path('ajoutproduit')}}\">+</a>
+\t\t\t\t\t{% endif %}
 \t\t\t\t</h1>
 \t\t\t</div>
 \t\t</div>
-
 
 \t\t<div class=\"container\">
 \t\t\t<div class=\"row\">
@@ -644,11 +726,11 @@ class __TwigTemplate_e10901351ff46a138c02684641c13f4763ec767ac77b142ad9d22878efa
 \t\t\t\t\t\t\t\t\t<p class=\"card-text\">Prix :
 \t\t\t\t\t\t\t\t\t\t{{ produit.prix }}
 \t\t\t\t\t\t\t\t\t\t€</p>
-\t\t\t\t\t\t\t<div class=\"d-flex justify-content-between\">
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/info.png\" alt=\"Info\" width=\"25\"></a>
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/panier.png\" alt=\"Panier\" width=\"25\"></a>
-\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t<div class=\"d-flex justify-content-between\">
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/info.png\" alt=\"Info\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/panier.png\" alt=\"Panier\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
@@ -661,6 +743,9 @@ class __TwigTemplate_e10901351ff46a138c02684641c13f4763ec767ac77b142ad9d22878efa
 \t\t\t<div class=\"row mt-3\">
 \t\t\t\t<h1>
 \t\t\t\t\tChariots de golf
+\t\t\t\t\t{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_EMPLOYE')%}
+\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"{{path('ajoutproduit')}}\">+</a>
+\t\t\t\t\t{% endif %}
 \t\t\t\t</h1>
 \t\t\t</div>
 \t\t</div>
@@ -679,11 +764,11 @@ class __TwigTemplate_e10901351ff46a138c02684641c13f4763ec767ac77b142ad9d22878efa
 \t\t\t\t\t\t\t\t\t<p class=\"card-text\">Prix :
 \t\t\t\t\t\t\t\t\t\t{{ produit.prix }}
 \t\t\t\t\t\t\t\t\t\t€</p>
-\t\t\t\t\t\t\t<div class=\"d-flex justify-content-between\">
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/info.png\" alt=\"Info\" width=\"25\"></a>
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/panier.png\" alt=\"Panier\" width=\"25\"></a>
-\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t\t<div class=\"d-flex justify-content-between\">
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/info.png\" alt=\"Info\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/panier.png\" alt=\"Panier\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
@@ -696,60 +781,32 @@ class __TwigTemplate_e10901351ff46a138c02684641c13f4763ec767ac77b142ad9d22878efa
 \t\t\t<div class=\"row mt-3\">
 \t\t\t\t<h1>
 \t\t\t\t\tSacs de golf
+\t\t\t\t\t{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_EMPLOYE')%}
+\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"{{path('ajoutproduit')}}\">+</a>
+\t\t\t\t\t{% endif %}
 \t\t\t\t</h1>
 \t\t\t</div>
 \t\t</div>
 
 
-<div class=\"container\">
-\t<div class=\"row row-cols-4\">
 \t\t{% for produit in produits %}
 \t\t\t{% if produit.categorie == \"sac\" %}
-\t\t\t\t<div class=\"col\">
-\t\t\t\t\t<div class=\"card mb-4\" style=\"width: 18rem;\">
-\t\t\t\t\t\t<img src=\"{{ asset('Images/' ~ produit.image) }}\" class=\"card-img-top\" alt=\"{{ produit.nom }}\">
-\t\t\t\t\t\t<div class=\"card-body\">
-\t\t\t\t\t\t\t<h5 class=\"card-title\">{{ produit.nom }}</h5>
-\t\t\t\t\t\t\t<p class=\"card-text\">{{ produit.description }}</p>
-\t\t\t\t\t\t\t<p class=\"card-text\">Prix : {{ produit.prix }} €</p>
-\t\t\t\t\t\t\t<div class=\"d-flex justify-content-between\">
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/info.png\" alt=\"Info\" width=\"25\"></a>
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/panier.png\" alt=\"Panier\" width=\"25\"></a>
-\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t</div>
-\t\t\t\t</div>
-\t\t\t{% endif %}
-\t\t{% endfor %}
-\t</div>
-</div>
-
-
-\t\t<div class=\"container\">
-\t\t\t<div class=\"row mt-3\">
-\t\t\t\t<h1>
-\t\t\t\t\tBalles de golf
-\t\t\t\t</h1>
-\t\t\t</div>
-\t\t</div>
-
-
-
-<div class=\"container\">
-\t<div class=\"row\">
-\t\t{% for produit in produits %}
-\t\t\t{% if produit.categorie == \"balle\" %}
 \t\t\t\t<div class=\"col-md-4\">
 \t\t\t\t\t<div class=\"card mb-4\" style=\"width: 18rem;\">
 \t\t\t\t\t\t<img src=\"{{ asset('Images/' ~ produit.image) }}\" class=\"card-img-top\" alt=\"{{ produit.nom }}\">
 \t\t\t\t\t\t<div class=\"card-body\">
 \t\t\t\t\t\t\t<h5 class=\"card-title\">{{ produit.nom }}</h5>
 \t\t\t\t\t\t\t<p class=\"card-text\">{{ produit.description }}</p>
-\t\t\t\t\t\t\t<p class=\"card-text\">Prix : {{ produit.prix }} €</p>
+\t\t\t\t\t\t\t<p class=\"card-text\">Prix :
+\t\t\t\t\t\t\t\t{{ produit.prix }}
+\t\t\t\t\t\t\t\t€</p>
 \t\t\t\t\t\t\t<div class=\"d-flex justify-content-between\">
 \t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/info.png\" alt=\"Info\" width=\"25\"></a>
-\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t{% if app.user and produit in app.user.getFavoris() %}
+\t\t\t\t\t\t\t\t\t<a href=\"{{ path('favoris_supprimer', {id: produit.id}) }}\" class=\"btn btn-success\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t{% else %}
+\t\t\t\t\t\t\t\t\t<a href=\"{{ path('favoris_ajouter', {id: produit.id}) }}\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t{% endif %}
 \t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/panier.png\" alt=\"Panier\" width=\"25\"></a>
 \t\t\t\t\t\t\t</div>
 \t\t\t\t\t\t</div>
@@ -757,8 +814,46 @@ class __TwigTemplate_e10901351ff46a138c02684641c13f4763ec767ac77b142ad9d22878efa
 \t\t\t\t</div>
 \t\t\t{% endif %}
 \t\t{% endfor %}
+
+
+\t\t<div class=\"container\">
+\t\t\t<div class=\"row mt-3\">
+\t\t\t\t<h1>
+\t\t\t\t\tBalles de golf
+
+\t\t\t\t\t{% if is_granted('ROLE_ADMIN') or is_granted('ROLE_EMPLOYE')%}
+\t\t\t\t\t\t<a class=\"nav-link text-white\" href=\"{{path('ajoutproduit')}}\">+</a>
+\t\t\t\t\t{% endif %}
+\t\t\t\t</h1>
+\t\t\t</div>
+\t\t</div>
+
+\t\t<div class=\"container\">
+\t\t\t<div class=\"row\">
+\t\t\t\t{% for produit in produits %}
+\t\t\t\t\t{% if produit.categorie == \"balle\" %}
+\t\t\t\t\t\t<div class=\"col-md-4\">
+\t\t\t\t\t\t\t<div class=\"card mb-4\" style=\"width: 18rem;\">
+\t\t\t\t\t\t\t\t<img src=\"{{ asset('Images/' ~ produit.image) }}\" class=\"card-img-top\" alt=\"{{ produit.nom }}\">
+\t\t\t\t\t\t\t\t<div class=\"card-body\">
+\t\t\t\t\t\t\t\t\t<h5 class=\"card-title\">{{ produit.nom }}</h5>
+\t\t\t\t\t\t\t\t\t<p class=\"card-text\">{{ produit.description }}</p>
+\t\t\t\t\t\t\t\t\t<p class=\"card-text\">Prix :
+\t\t\t\t\t\t\t\t\t\t{{ produit.prix }}
+\t\t\t\t\t\t\t\t\t\t€</p>
+\t\t\t\t\t\t\t\t\t<div class=\"d-flex justify-content-between\">
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/info.png\" alt=\"Info\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/favoris.png\" alt=\"Favoris\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t\t<a href=\"#\" class=\"btn btn-outline-secondary\"><img src=\"Images/Img-proshop/panier.png\" alt=\"Panier\" width=\"25\"></a>
+\t\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t\t</div>
+\t\t\t\t\t\t</div>
+\t\t\t\t\t{% endif %}
+\t\t\t\t{% endfor %}
+\t\t\t</div>
+\t\t</div>
 \t</div>
-</div></div>
 
 {% endblock %}
 
